@@ -3,3 +3,31 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.links {
+    text-decoration: none;
+    color:  #CFC7C0;
+    background-color: #D93F33;
+}
+
+.links:hover {
+    text-decoration: none;
+    color:  #D93F33;
+    background-color: #CFC7C0;
+}
+
+.topnav {
+    background-color: #D93F33;
+}
+
+body {
+    background-color: #CFC7C0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+    color:  #CFC7C0;
+}

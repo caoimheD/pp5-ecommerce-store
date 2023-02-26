@@ -106,3 +106,6 @@ Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` f
 ---
 
 Happy coding!
+
+
+https://coolors.co/d93f33-947e70-bdaea1-cfc7c0-5d3e35
