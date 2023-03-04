@@ -6,16 +6,29 @@
 <div class="container">
     <div class="row">
         <div class="col">
-          Placeholder text
-        </div>
-        <div class="col">
-            Placeholder text
+          {% for product in products %}
 
-            <a class="btn btn-primary" href="#" role="button">Shop now!</a>
+      <div class="card text-center mb-3 list">
+        <div class="card-body">
+          
+          <h5 class="card-title">{{ product.title }}</h5>
+
+          <h6 class="card-subtitle mb-2 text-muted">{{ product.author }}</h6>
+
+          <h6 class="card-subtitle mb-2 text-muted">{{ product.price }}</h6>
+
+          <a href="{% url 'productdetail' product.id %}" class="card-link">See more</a>
+        </div>
+      </div>
+
+      {% endfor %}
+
+
         </div>
         <div class="col">
-            Placeholder text
+            Placeholder text  
         </div>
+
       </div>
 </div>
 

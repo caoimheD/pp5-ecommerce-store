@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm">
+                        <h3>Book details</h3>
+                        <ul class="list-group" style="border: 3px solid #22333B;">
+
+                            <li class="list-group-item listdetails">Category: {{ productdetails.category }}</li>
+                            <li class="list-group-item listdetails">Title: {{ productdetails.title }}</li>
+                            <li class="list-group-item listdetails">Author: {{ productdetails.author }}</li>
+                            <li class="list-group-item listdetails">Description: {{ productdetails.description }}</li>
+                            <li class="list-group-item listdetails">Sku: {{ productdetails.sku }}</li>
+                            <li class="list-group-item listdetails">Price: {{ productdetails.price }}</li>
+                            <li class="list-group-item listdetails">Image: {{ productdetails.image }}</li>
+
+                        </ul>
+
+
+
+                    </div>
+                    <div class="col">
+                        Placeholder text
+                    </div>
+
+                </div>
+            </div>
+
+            {% endblock %}
