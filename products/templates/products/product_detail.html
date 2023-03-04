@@ -3,34 +3,37 @@
 
 {% block content %}
 
-<div class="container">
+
+<div class="container-fluid">
+
     <div class="row">
-        <div class="col">
-
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm">
-                        <h3>Book details</h3>
-                        <ul class="list-group" style="border: 3px solid #22333B;">
-
-                            <li class="list-group-item listdetails">Category: {{ productdetails.category }}</li>
-                            <li class="list-group-item listdetails">Title: {{ productdetails.title }}</li>
-                            <li class="list-group-item listdetails">Author: {{ productdetails.author }}</li>
-                            <li class="list-group-item listdetails">Description: {{ productdetails.description }}</li>
-                            <li class="list-group-item listdetails">Sku: {{ productdetails.sku }}</li>
-                            <li class="list-group-item listdetails">Price: {{ productdetails.price }}</li>
-                            <li class="list-group-item listdetails">Image: {{ productdetails.image }}</li>
-
-                        </ul>
 
 
+        <div class="col-sm text-center">
+            <img src="{{ productdetails.image.url }}" alt="book cover" class="img-fluid" width="500" height="600">
 
-                    </div>
-                    <div class="col">
-                        Placeholder text
-                    </div>
+        </div>
 
-                </div>
-            </div>
+        <div class="col-sm">
 
-            {% endblock %}
+            <h3>{{ productdetails.title }} - €{{ productdetails.price }}</h3>
+            <ul class="list-group" style="border: 3px solid #22333B;">
+
+                <li class="list-group-item listdetails">Category: {{ productdetails.category }}</li>
+                <li class="list-group-item listdetails">Title: {{ productdetails.title }}</li>
+                <li class="list-group-item listdetails">Author: {{ productdetails.author }}</li>
+                <li class="list-group-item listdetails">Description: {{ productdetails.description }}</li>
+                <li class="list-group-item listdetails">Sku: {{ productdetails.sku }}</li>
+            </ul>
+
+            <br>
+
+            <a class="btn btn-link" href="#" role="button"><i class="fa-solid fa-cart-shopping"></i> Add to cart</a>
+        </div>
+
+    </div>
+
+
+</div>
+
+{% endblock %}
