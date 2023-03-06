@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
 {% block content %}
 
 
@@ -8,32 +12,28 @@
 
     <div class="row">
 
-
-        <div class="col-sm text-center">
-            <img src="{{ productdetails.image.url }}" alt="book cover" class="img-fluid" width="500" height="600">
-
+        <div class="col-sm-4 text-center">
+            {% if productdetails.image %}
+            <img src="{{ productdetails.image.url }}" alt="{{ product.title }}" class="img-fluid card-img-top">
+            {% else %}
+            <img class="card-img-top img-fluid" src="{% static 'media/blank.jpg' %}" alt="{{ product.title }}">
+            {% endif %}
         </div>
 
         <div class="col-sm">
-
             <h3>{{ productdetails.title }} - €{{ productdetails.price }}</h3>
-            <ul class="list-group" style="border: 3px solid #22333B;">
+            <h4> <a class="btn btn-link" href="#" role="button"><i class="fa-solid fa-cart-shopping"></i> Add to cart</a></h4>
+            <ul class="list-group">
 
-                <li class="list-group-item listdetails">Category: {{ productdetails.category }}</li>
-                <li class="list-group-item listdetails">Title: {{ productdetails.title }}</li>
-                <li class="list-group-item listdetails">Author: {{ productdetails.author }}</li>
-                <li class="list-group-item listdetails">Description: {{ productdetails.description }}</li>
-                <li class="list-group-item listdetails">Sku: {{ productdetails.sku }}</li>
+                <li class="list-group-item bookdetails">Category: {{ productdetails.category }}</li>
+                <li class="list-group-item bookdetails">Title: {{ productdetails.title }}</li>
+                <li class="list-group-item bookdetails">Author: {{ productdetails.author }}</li>
+                <li class="list-group-item bookdetails">Description: {{ productdetails.description }}</li>
+                <li class="list-group-item bookdetails">Sku: {{ productdetails.sku }}</li>
             </ul>
-
             <br>
-
-            <a class="btn btn-link" href="#" role="button"><i class="fa-solid fa-cart-shopping"></i> Add to cart</a>
         </div>
-
     </div>
-
-
 </div>
 
 {% endblock %}

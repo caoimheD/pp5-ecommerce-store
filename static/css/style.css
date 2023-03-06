@@ -32,6 +32,16 @@ footer {
     color:  #CFC7C0;
 }
 
-.price {
+.block {
     background-color: aqua;
+}
+
+h3, h4 {
+    text-align: center;
+    color: #D93F33;
+}
+
+.bookdetails {
+    background-color: #CFC7C0;
+    border: none;
 }
