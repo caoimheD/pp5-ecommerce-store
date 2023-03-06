@@ -2,38 +2,38 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
 {% endblock %}
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-          {% for product in products %}
+<div class="container-fluid">
 
-      <div class="card text-center mb-3 list">
-        <div class="card-body">
-          
-          <h5 class="card-title">{{ product.title }}</h5>
+  <div class="row">
 
-          <h6 class="card-subtitle mb-2 text-muted">{{ product.author }}</h6>
+    <div class="col text-center" style="display: flex;">
 
-          <h6 class="card-subtitle mb-2 text-muted">{{ product.price }}</h6>
+      {% for product in products %}
+      <div class="card" style="padding: 5px;">
+        {% if product.image %}
+        <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.title }}"
+          style="width: 15rem;">
+        {% else %}
+        <img class="card-img-top img-fluid" src="{% static 'media/blank.jpg' %}" alt="{{ product.title }}"
+          style="width: 15rem;">
+        {% endif %}
 
-          <a href="{% url 'productdetail' product.id %}" class="card-link">See more</a>
-        </div>
+        <h5 class="card-title">{{ product.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ product.author }}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">{{ product.price }}</h6>
+        <a href="{% url 'productdetail' product.id %}" class="card-link">See more</a>
       </div>
 
       {% endfor %}
-
-
-        </div>
-        <div class="col">
-            Placeholder text  
-        </div>
-
-      </div>
+    </div>
+  </div>
 </div>
+<br>
+
 
 {% endblock %}
