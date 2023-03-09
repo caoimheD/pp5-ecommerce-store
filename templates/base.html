@@ -4,7 +4,7 @@
 <html class="h-100" lang="en">
 
 <head>
-  <title>Shopping Lists</title>
+  <title>Book Shop</title>
   <link rel="icon" type="image/x-icon" href="{% static 'media/book-solid.svg' %}">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -40,8 +40,14 @@
         aria-expanded="false"><i class="fa-solid fa-book"></i> Books</a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
-        <a class="dropdown-item" href="#">Category1</a>
-        <a class="dropdown-item" href="#">Category2</a>
+        {% for category in categories %}
+        <a class="dropdown-item" href="{% url 'categorydetails' category.id %}">{{ category.name }}</a>
+        {% endfor %}
+ <!--      {% for category in category_urls %}
+    
+    <a href="{{category.url}}">{{category.name }}</a>
+{% endfor %}
+--> 
       </div>
     </li>
     <li class="nav-item dropdown">
