@@ -17,11 +17,6 @@ class ProductDetail(DetailView):
     template_name = '../templates/products/product_detail.html'
     context_object_name = 'productdetails'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['productscat'] = Product.category
-        return context
-
 
 class CategoryList(ListView):
     model = Category
@@ -31,5 +26,5 @@ class CategoryList(ListView):
 
 class CategoryDetails(DetailView):
     model = Category
-    template_name = '../templates/products/product_detail_category.html'
+    template_name = '../templates/products/product_category.html'
     context_object_name = 'categorydetails'
