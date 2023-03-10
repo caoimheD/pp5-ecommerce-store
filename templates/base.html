@@ -43,11 +43,6 @@
         {% for category in categories %}
         <a class="dropdown-item" href="{% url 'categorydetails' category.id %}">{{ category.name }}</a>
         {% endfor %}
- <!--      {% for category in category_urls %}
-    
-    <a href="{{category.url}}">{{category.name }}</a>
-{% endfor %}
---> 
       </div>
     </li>
     <li class="nav-item dropdown">
@@ -65,7 +60,7 @@
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link links" href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+      <a class="nav-link links" href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
     </li>
   </ul>
 
