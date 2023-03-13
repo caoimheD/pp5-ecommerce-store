@@ -42,6 +42,12 @@ h3, h4 {
 }
 
 .bookdetails {
-    background-color: #CFC7C0;
+    background-color: #F0EBD8;
     border: none;
+}
+
+.addcart {
+    background-color: #D93F33;
+    color: #F0EBD8;
+    align-items: center;
 }

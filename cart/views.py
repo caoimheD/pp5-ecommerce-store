@@ -4,10 +4,11 @@ from django.views.generic import ListView, DetailView, UpdateView, \
     CreateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse, reverse_lazy
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-
+@login_required
 def cart(request):
     """ Displays cart page """
 
@@ -40,6 +41,7 @@ class CreateCart(LoginRequiredMixin, CreateView):
         return reverse_lazy('products')
 
 
+@login_required
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
 
