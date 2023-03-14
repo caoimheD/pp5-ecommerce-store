@@ -2,22 +2,29 @@
     background-image: url("../media/booksfaded.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
+    color: #1C1D21;
 }
+
+h1 {
+    text-shadow: 2px 2px 5px #D95950;
+  }
 
 .links {
     text-decoration: none;
-    color:  #CFC7C0;
-    background-color: #D93F33;
+    color:  #FEFDFF;
+    background-color: #D95950;
+    text-shadow: 1px 1px 3px #1C1D21;
 }
 
 .links:hover {
     text-decoration: none;
-    color:  #D93F33;
-    background-color: #CFC7C0;
+    color:  #D95950;
+    background-color: #FEFDFF;
+    text-shadow: none;
 }
 
 .topnav {
-    background-color: #D93F33;
+    background-color: #D95950;
 }
 
 body {
@@ -29,7 +36,7 @@ body {
 
 footer {
     margin-top: auto;
-    color:  #CFC7C0;
+    color:  #F0EBD8;
 }
 
 .block {
@@ -38,7 +45,7 @@ footer {
 
 h3, h4 {
     text-align: center;
-    color: #D93F33;
+    color: #D95950;
 }
 
 .bookdetails {
@@ -47,7 +54,12 @@ h3, h4 {
 }
 
 .addcart {
-    background-color: #D93F33;
+    background-color: #D95950;
     color: #F0EBD8;
     align-items: center;
+}
+
+.image {
+    max-width: 250px;
+    max-height: 350px;
 }

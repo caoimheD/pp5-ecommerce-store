@@ -14,9 +14,9 @@
 
         <div class="col-sm-4 text-center">
             {% if productdetails.image %}
-            <img src="{{ productdetails.image.url }}" alt="{{ product.title }}" class="img-fluid card-img-top">
+            <img src="{{ productdetails.image.url }}" alt="{{ product.title }}" class="img-fluid card-img-top image">
             {% else %}
-            <img class="card-img-top img-fluid" src="{% static 'media/blank.jpg' %}" alt="{{ product.title }}">
+            <img class="card-img-top img-fluid image" src="{% static 'media/blank.jpg' %}" alt="{{ product.title }}">
             {% endif %}
         </div>
 
@@ -31,28 +31,28 @@
                 <li class="list-group-item bookdetails">Sku: {{ productdetails.sku }}</li>
             </ul>
             <br>
-
-
-            <!--Add to cart form-->
-            
-            <form class="form" action="{% url 'add_to_cart' productdetails.id %}" method="POST">
-                {% csrf_token %}
-                <div class="form-group">
-                    <p><i class="fa-solid fa-cart-shopping"></i> Quantity:</p>
-                    <input class="form-control-sm" type="number" name="quantity" value="1" min="1" max="99"
-                        data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-link addcart text-uppercase" value="Add to Cart">
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                </div>
-            </form>
-
         </div>
     </div>
 
+<!--Add to cart form-->
+    <div class="row">
+        <div class="col" style="text-align: center;">
+        <form class="form" action="{% url 'add_to_cart' productdetails.id %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <p><i class="fa-solid fa-cart-shopping"></i> Quantity:</p>
+                <input class="form-control-sm" type="number" name="quantity" value="1" min="1" max="99"
+                    data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-link addcart text-uppercase" value="Add to Cart">
+                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            </div>
+        </form>
+    </div>
+    </div>
+
 </div>
-</div>
-</div>
+
 
 {% endblock %}
