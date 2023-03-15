@@ -3,12 +3,6 @@
 
 {% block content %}
 
-{% for cart in carts %}
-
-{{ cart.user }}
-
-{% endfor %}
-
 <section class="h-100">
   <div class="container h-100 py-5">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -20,10 +14,12 @@
           <h3 class="fw-normal mb-0 text-black">Shopping Cart</h3>
         </div>
 
-        <div class="card rounded-3 mb-4" style="background-color: #F0EBD8; border: solid 2px #748CAB;">
+        <div class="card rounded-3 mb-4 cart">
           <div class="card-body p-4">
             <div class="row d-flex justify-content-between align-items-center">
+
               {% for item in cart_items %}
+
               <div class="col-md-2 col-lg-2 col-xl-2">
                 {% if item.product.image %}
                 <img src="{{ item.product.image.url }}" class="img-fluid rounded-3" alt="book cover">
@@ -51,7 +47,7 @@
               <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                 <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
               </div>
-<!--
+              <!--
               <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                 <button class="btn btn-link px-2"
                   onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
@@ -66,28 +62,29 @@
                   <i class="fas fa-plus"></i>
                 </button>
               </div>
--->              
+-->
 
               {% endfor %}
             </div>
           </div>
         </div>
 
-        <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
+        <div class="prices">
+        <h6>Cart Total: €{{ total|floatformat:2 }}</h6>
         <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-        <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+        <h5>Total: €{{ grand_total|floatformat:2 }}</h5>
+        </div>
+
         {% if free_delivery_delta > 0 %}
         <p class="mb-1 text-danger">
           You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
         </p>
         {% endif %}
 
-        <div class="card">
-          <div class="card-body" style="background-color: #F0EBD8;">
-            <button type="button" class="btn btn-block btn-lg" style="background-color: #748CAB;">Secure
-              Checkout</button>
-          </div>
-        </div>
+        <br>
+        <button type="button" class="btn btn-block btn-lg checkout">Secure
+          Checkout</button>
+
         {% else %}
         <p class="lead mb-5">Your cart is empty.</p>
         <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
@@ -101,4 +98,5 @@
     </div>
   </div>
 </section>
+
 {% endblock %}

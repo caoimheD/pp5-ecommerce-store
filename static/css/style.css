@@ -28,15 +28,23 @@ h1 {
 }
 
 body {
-    background-color: #F0EBD8;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #F2F4F3;
+
+}
+
+.product {
+    background-color: #F2F4F3;
+    border: 1px solid #1C1D21;
+    padding: 2px;
+    margin: 2px;
 }
 
 footer {
     margin-top: auto;
-    color:  #F0EBD8;
+    color:  #FEFDFF;
 }
 
 .block {
@@ -49,17 +57,39 @@ h3, h4 {
 }
 
 .bookdetails {
-    background-color: #F0EBD8;
+    background-color: #F2F4F3;
     border: none;
+    color: #1C1D21;
 }
 
 .addcart {
     background-color: #D95950;
-    color: #F0EBD8;
+    color: #FEFDFF;
     align-items: center;
+    font-weight: 480;
+}
+
+.addcart:hover {
+    color:  #F0C808;
+    text-decoration: none;
 }
 
 .image {
     max-width: 250px;
     max-height: 350px;
+}
+
+.cart {
+    border: 2px solid #D95950;
+    background-color: #F2F4F3;
+}
+
+.checkout {
+    background-color: #F0C808;
+    color:#1C1D21;
+}
+
+.prices {
+    color: #1C1D21;
+    font-weight: bolder;
 }
