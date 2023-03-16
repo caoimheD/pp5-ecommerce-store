@@ -76,23 +76,23 @@
         </div>
 
         {% if free_delivery_delta > 0 %}
-        <p class="mb-1 text-danger">
-          You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
+        <p>
+          Free delivery if you spend €{{ free_delivery_delta }} more!
         </p>
         {% endif %}
-
+        
         <br>
         <button type="button" class="btn btn-block btn-lg checkout">Secure
           Checkout</button>
 
         {% else %}
-        <p class="lead mb-5">Your cart is empty.</p>
-        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-          <span class="icon">
+
+        <p>Your cart is empty.</p>
+        <a href="{% url 'products' %}" class="btn btn-lg addcart">
             <i class="fas fa-chevron-left"></i>
-          </span>
-          <span class="text-uppercase">Keep Shopping</span>
+          Browse books
         </a>
+      
         {% endif %}
       </div>
     </div>
