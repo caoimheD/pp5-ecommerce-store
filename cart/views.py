@@ -78,9 +78,8 @@ def remove_from_cart(request, item_id):
     cart = request.session.get('cart', {})
     cartitems = list(cart.keys())
 
-    for item_id in list(cart.keys()):
+    if item_id in cartitems:
         cart.pop(item_id, None)
-    
-    print(cartitems)
+  
     request.session['cart'] = cart
     return redirect('cart')
