@@ -37,68 +37,88 @@
               <div class="col-md-3 col-lg-3 col-xl-3">
                 <p class="lead fw-normal mb-2">Quantity</p>
                 <p>
-                  <span class="text-muted">{{ item.quantity }} </span></p>
+                  <a href="{% url 'edit_cart' item %}"><i class="fas fa-minus"></i></a>
+                  <span class="text-muted"> {{ item.quantity }} </span>
+                  <a href="{% url 'edit_cart' item %}"><i class="fas fa-plus"></i></a>
+                </p>
               </div>
 
               <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                 <h5 class="mb-0">€ {{ item.product.price }}</h5>
               </div>
-              
 
+              <!-- Remove item -->
               <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                <a href="{% url 'remove_from_cart' item.product.id %}" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                <a href="{% url 'remove_from_cart' item.product.id %}" class="text-danger"><i
+                    class="fas fa-trash fa-lg"></i></a>
               </div>
-              
-              <!--
-              <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+
+              <!-- Update quantity -->
+
+
+              <!--           
+                  <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                 <button class="btn btn-link px-2"
-                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                 onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                   <i class="fas fa-minus"></i>
                 </button>
+                {{ item.quantity }}
 
                 <input min="0" name="quantity" value="{{ item.quantity }}" type="number"
-                  class="form-control form-control-sm" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}"/>
+                  class="form-control form-control-sm" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" />
 
                 <button class="btn btn-link px-2"
                   onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                   <i class="fas fa-plus"></i>
                 </button>
-              </div>
--->
-{% endfor %} 
+                 </div>
+     -->
 
-            </div>
+           
+
+            {% endfor %}
+
           </div>
         </div>
+      </div>
 
-        <div class="prices">
+      <!--Prices and checkout-->
+      <div class="prices">
         <h6>Cart Total: €{{ total|floatformat:2 }}</h6>
         <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
         <h5>Total: €{{ grand_total|floatformat:2 }}</h5>
-        </div>
-
-        {% if free_delivery_delta > 0 %}
-        <p>
-          Free delivery if you spend €{{ free_delivery_delta }} more!
-        </p>
-        {% endif %}
-        
-        <br>
-        <button type="button" class="btn btn-block btn-lg checkout">Secure
-          Checkout</button>
-
-        {% else %}
-
-        <p>Your cart is empty.</p>
-        <a href="{% url 'products' %}" class="btn btn-lg addcart">
-            <i class="fas fa-chevron-left"></i>
-          Browse books
-        </a>
-      
-        {% endif %}
       </div>
+
+      {% if free_delivery_delta > 0 %}
+      <p>
+        Free delivery if you spend €{{ free_delivery_delta }} more!
+      </p>
+      {% endif %}
+
+      <br>
+      <button type="button" class="btn btn-block btn-lg checkout">Secure
+        Checkout</button>
+
+      {% else %}
+
+      <p>Your cart is empty.</p>
+      <a href="{% url 'products' %}" class="btn btn-lg addcart">
+        <i class="fas fa-chevron-left"></i>
+        Browse books
+      </a>
+
+      {% endif %}
     </div>
   </div>
+  </div>
 </section>
+
+<script type="text/javascript">
+  // Update quantity on click
+  $('.update-link').click(function (e) {
+    var form = $(this).prev('.update-form');
+    form.submit();
+  })
+</script>
 
 {% endblock %}

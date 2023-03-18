@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from .models import Cart
 from django.views.generic import ListView, DetailView, UpdateView, \
     CreateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -14,32 +13,6 @@ def cart(request):
     """ Displays cart page """
 
     return render(request, 'cart/cart.html')
-
-
-class CartList(ListView):
-    model = Cart
-    template_name = '../templates/products/cart.html'
-    context_object_name = 'cart'
-
-
-class CartDetail(DetailView):
-    model = Cart
-    template_name = '../templates/products/cart.html'
-    context_object_name = 'cartdetails'
-
-
-class CreateCart(LoginRequiredMixin, CreateView):
-    model = Cart
-    fields = 'product',
-    template_name = '../templates/cart/add_cart.html'
-    context_object_name = 'addcart'
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super(CreateCart, self).form_valid(form)
-    
-    def get_success_url(self):
-        return reverse_lazy('products')
 
 
 @login_required
@@ -59,21 +32,24 @@ def add_to_cart(request, item_id):
     return redirect(redirect_url)
 
 
+@login_required
 def edit_cart(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
+    """Adjust the quantity of a specified product"""
 
-    quantity = int(request.POST.get('quantity'))
-    cart = request.session.get('bag', {})
+#    quantity = int(request.POST.get('quantity', 1))
+    cart = request.session.get('cart', {})
+    cartitems = list(cart.keys())
 
-    if quantity > 0:
-        cart[item_id] = quantity
-    else:
-        cart.pop(item_id)
+    for item in cart:
+        print(item_id)
 
-    request.session['cart'] = cart
-    return redirect(reverse('cart'))
+#    request.session['cart'] = cart
+    print(cartitems)
+    print(cart)
+    return redirect('cart')
 
 
+@login_required
 def remove_from_cart(request, item_id):
     cart = request.session.get('cart', {})
     cartitems = list(cart.keys())
