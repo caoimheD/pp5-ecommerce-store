@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, UpdateView, \
     CreateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -34,23 +34,22 @@ def add_to_cart(request, item_id):
 
 @login_required
 def edit_cart(request, item_id):
-    """Adjust the quantity of a specified product"""
+    """Adjust the quantity of an item"""
 
-#    quantity = int(request.POST.get('quantity', 1))
+    quantity = int(request.POST.get('quantity', 1))
     cart = request.session.get('cart', {})
-    cartitems = list(cart.keys())
 
-    for item in cart:
-        print(item_id)
+    if quantity > 0:
+        cart[item_id] = quantity
 
-#    request.session['cart'] = cart
-    print(cartitems)
-    print(cart)
+    request.session['cart'] = cart
     return redirect('cart')
 
 
 @login_required
 def remove_from_cart(request, item_id):
+    """Delete an item from the cart"""
+
     cart = request.session.get('cart', {})
     cartitems = list(cart.keys())
 
