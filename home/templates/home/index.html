@@ -20,17 +20,24 @@
 <div class="container">
     <div class="row">
         <div class="col">
-          Placeholder text
+          <img src="{% static 'media/booksbackground2.jpg' %}" class="img-fluid" alt="Shopping Bag">
         </div>
         <div class="col">
-            Placeholder text
-
-            <a class="btn btn-primary" href="#" role="button">Shop now!</a>
-        </div>
-        <div class="col">
-            Placeholder text
+            <p style="text-align: center;">
+              Browse and purchase books accross different categories 
+              <br>
+              <a class="btn addcart" href="{% url 'products' %}" role="button">Shop now!</a>
+            </p>  
+              <br>
+            <p style="text-align: center;">
+              Create an account to checkout and access your profile
+              <br>
+              <a class="btn addcart" href="{% url 'account_signup' %}" role="button">Register here</a>
+            </p>
+            
         </div>
       </div>
+      <br>
 </div>
 
 {% endblock %}
