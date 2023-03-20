@@ -7,6 +7,19 @@
 
 {% block content %}
 
+  <!-- Messages -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+          {{ message | safe }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 
 <div class="container-fluid">
 
@@ -56,3 +69,12 @@
 
 
 {% endblock %}
+
+  <!-- Success messages timeout -->
+  <script>
+    setTimeout(function () {
+      let messages = document.getElementById('msg');
+      let alert = new bootstrap.Alert(messages);
+      alert.close();
+    }, 3000);
+  </script>
