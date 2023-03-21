@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Messages -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                {{ message | safe }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+<h3>Secure Checkout</h3>
+
+<form method="POST">
+    <div class="form-row align-items-center">
+        <div class="col-sm-3 my-1">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save" class="form-control">
+        </div>
+    </div>
+</form>
+
+{% endblock %}
+
+<!-- Success messages timeout -->
+<script>
+    setTimeout(function () {
+        let messages = document.getElementById('msg');
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+    }, 3000);
+</script>

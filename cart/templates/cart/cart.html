@@ -93,8 +93,10 @@
         {% endif %}
 
         <br>
+        <a href="{% url 'checkout' %}">
         <button type="button" class="btn btn-block btn-lg checkout">Secure
           Checkout</button>
+        </a>
 
         <!--If cart is empty-->
         {% else %}
