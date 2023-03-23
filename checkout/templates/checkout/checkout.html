@@ -22,10 +22,10 @@
 
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-md">
             <form method="POST">
-                <div class="form-row align-items-center">
-                    <div class="col-sm-3 my-1">
+                <div class="form-row">
+                    <div class="mb-3">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <input type="submit" value="Save" class="form-control">
@@ -34,8 +34,9 @@
             </form>
         </div>
 
-        <div class="col">
+        <div class="col-sm">
             {% include 'includes/display_cart.html' %}
+            {% include 'includes/payment_box.html' %}
         </div>
     </div>
 </div>
