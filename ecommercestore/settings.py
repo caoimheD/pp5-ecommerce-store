@@ -53,10 +53,13 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'checkout',
+    'crispy_forms',
 ]
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -84,6 +87,10 @@ TEMPLATES = [
                 "products.context_processors.category_list",
                 "cart.context_processors.cart_contents",
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]

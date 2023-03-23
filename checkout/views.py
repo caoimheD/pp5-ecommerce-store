@@ -23,3 +23,7 @@ class CreateOrder(CreateView):
              'country'
     template_name = '../templates/checkout/checkout.html'
     context_object_name = 'checkout'
+
+    def cart(self, request):
+        cart = request.session.get('cart', {})
+        return cart
