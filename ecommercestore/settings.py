@@ -188,5 +188,10 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Stripe and payments
+
 FREE_DELIVERY_THRESHOLD = 60
 STANDARD_DELIVERY_FEE = 5
+STRIPE_CURRENCY = 'EUR'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')

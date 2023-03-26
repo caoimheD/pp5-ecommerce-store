@@ -1,5 +1,8 @@
 <h4 class="mb-3">Payment</h4>
+<div class="mb-3" id="card-element">
 
+<form action="" method="POST">
+    {% csrf_token %}
 <div class="d-block my-3">
     <div class="custom-control custom-radio">
         <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
@@ -39,8 +42,8 @@
         </div>
     </div>
 </div>
-<!--
+
 <hr class="mb-4">
-<button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
--->
+<button class="btn btn-primary btn-lg btn-block submit-button" type="submit">Complete order</button>
 </form>
+</div>

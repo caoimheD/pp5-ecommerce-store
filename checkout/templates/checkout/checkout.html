@@ -24,7 +24,7 @@
     <div class="row">
         <div class="col-md">
             <form method="POST">
-                <div class="form-row">
+                <div class="form-row" id="payment-form">
                     <div class="mb-3">
                         {% csrf_token %}
                         {{ form.as_p }}
@@ -36,7 +36,9 @@
 
         <div class="col-sm">
             {% include 'includes/display_cart.html' %}
-            {% include 'includes/payment_box.html' %}
+
+    <!--      {% include 'includes/payment_box.html' %} -->  
+    <button class="button is-primary" id="submitBtn">Purchase!</button>
         </div>
     </div>
 </div>
@@ -51,3 +53,6 @@
         alert.close();
     }, 3000);
 </script>
+
+
+<script src="{% static 'checkout/js/checkout.js' %}"></script>
