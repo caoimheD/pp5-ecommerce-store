@@ -1,0 +1,49 @@
+{% load static %}
+<div class="row">
+    <!-- 
+        <div class="col">
+         <img src="{% static 'media/booksbackground2.jpg' %}" class="img-fluid" alt="Shopping Bag"> 
+        </div>
+        -->
+    <div class="col">
+        <p style="text-align: center;">
+        </p>
+        <!--Order info-->
+        <p><strong>Order summary</strong></p>
+        <ul class="list-group" style="border-top: 2px solid #D95950;">
+            <li class="list-group-item bookdetails">Order date: {{ order.date }}</li>
+            <li class="list-group-item bookdetails">Order Number: {{ order.order_number }}</li>
+            {% for item in order.lineitems.all %}
+            <li class="list-group-item bookdetails">Item: {{ item.product.title }}, Qty: {{ item.quantity }} @
+                €{{ item.product.price }} each</li>
+            {% endfor %}
+        </ul>
+        <br>
+        <!--Delivery info-->
+        <p><strong>Delivery information</strong></p>
+        <ul class="list-group" style="border-top: 2px solid #D95950;">
+            <li class="list-group-item bookdetails">Full name: {{ order.full_name }}</li>
+            <li class="list-group-item bookdetails">Address 1: {{ order.street_address1 }}</li>
+            {% if order.street_address2 %}
+            <li class="list-group-item bookdetails">Address 2: {{ order.street_address2 }}</li>
+            {% endif %}
+            {% if order.county %}
+            <li class="list-group-item bookdetails">County: {{ order.county }}</li>
+            {% endif %}
+            <li class="list-group-item bookdetails">Town or city: {{ order.town_or_city }}</li>
+            <li class="list-group-item bookdetails">Postal code: {{ order.postcode }}</li>
+            <li class="list-group-item bookdetails">Country: {{ order.country }}</li>
+            <li class="list-group-item bookdetails">Phone: {{ order.phone_number }}</li>
+        </ul>
+        <br>
+        <!--Billing info-->
+        <p><strong>Billing summary</strong></p>
+        <ul class="list-group" style="border-top: 2px solid #D95950;">
+            <li class="list-group-item bookdetails">Order total: {{ order.order_total }}</li>
+            <li class="list-group-item bookdetails">Delivery: {{ order.delivery_cost }}</li>
+            <li class="list-group-item bookdetails">Grand total: {{ order.grand_total }}</li>
+        </ul>
+        <br>
+        <a class="btn addcart" href="{% url 'products' %}" role="button">Back to shop</a>
+    </div>
+</div>

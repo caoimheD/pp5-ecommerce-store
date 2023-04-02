@@ -91,3 +91,5 @@ Python testing was done in Gitpod, with errors showing a red underscore and also
 
 <a name="credits"></a>
 ## References
+
+https://mdbootstrap.com/docs/standard/extended/shopping-carts/
