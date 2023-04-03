@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm">
+
+            <h3>Edit this product</h3>
+
+            <form method="POST">
+                <div class="form-row align-items-center">
+                    <div class="col-sm-3 my-1">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Save" class="form-control">
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

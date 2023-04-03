@@ -44,6 +44,12 @@
                 <li class="list-group-item bookdetails">Sku: {{ productdetails.sku }}</li>
             </ul>
             <br>
+            <!-- Buttons -->
+            <br>
+            <a href={% url 'updateproduct' productdetails.id %} class="button btn-lg active" role="button"
+                aria-pressed="true">Edit</a>
+            <a href={% url 'deleteproduct' productdetails.id %} class="button btn-lg active" role="button"
+                aria-pressed="true">Delete</a>
         </div>
     </div>
 
