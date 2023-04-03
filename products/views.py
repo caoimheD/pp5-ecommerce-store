@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib import messages
 from .models import Product, Category
 from django.views.generic import ListView, DetailView, UpdateView, \
@@ -37,7 +37,17 @@ class CategoryDetails(DetailView):
 # Admin CRUD functionality
 
 
-class ProductCreate(CreateView):
+class SuperUserRequiredMixin(LoginRequiredMixin, UserPassesTestMixin):
+    """
+    class that can be used in CRUD views to limit them to superuser only
+    """
+
+    def test_func(self):
+        return self.request.user.is_superuser
+
+
+class ProductCreate(SuperUserRequiredMixin, CreateView):
+    permission_required = 'all'
     model = Product
     fields = '__all__'
     template_name = '../templates/products/create_product.html'
@@ -45,9 +55,12 @@ class ProductCreate(CreateView):
 
     def get_success_url(self):
         return reverse_lazy('products')
+    
+    def get_queryset(self, *args, **kwargs):
+        return super().get_queryset(*args, **kwargs)
 
 
-class ProductUpdate(UpdateView):
+class ProductUpdate(SuperUserRequiredMixin, UpdateView):
     model = Product
     fields = '__all__'
     template_name = '../templates/products/update_product.html'
@@ -61,7 +74,7 @@ class ProductUpdate(UpdateView):
         return super(ProductUpdate, self).form_valid(form)
 
 
-class ProductDelete(DeleteView):
+class ProductDelete(SuperUserRequiredMixin, DeleteView):
     model = Product
     template_name = '../templates/products/delete_product.html'
     context_object_name = 'deleteproducts'
@@ -71,4 +84,4 @@ class ProductDelete(DeleteView):
 
     def form_valid(self, form):
         messages.success(self.request, 'Product deleted successfully!')
-        return super(ProductDelete(), self).form_valid(form)
+        return super(ProductDelete, self).form_valid(form)
