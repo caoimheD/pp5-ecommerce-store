@@ -47,7 +47,6 @@ class SuperUserRequiredMixin(LoginRequiredMixin, UserPassesTestMixin):
 
 
 class ProductCreate(SuperUserRequiredMixin, CreateView):
-    permission_required = 'all'
     model = Product
     fields = '__all__'
     template_name = '../templates/products/create_product.html'
