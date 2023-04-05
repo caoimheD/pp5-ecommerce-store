@@ -32,6 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['ecommerce-store-pp5.herokuapp.com', 'localhost']
+CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io', 'https://ecommerce-store-pp5.herokuapp.com']
 
 
 # Application definition
@@ -178,7 +179,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
