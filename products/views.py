@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib import messages
-from .models import Product, Category
+from .models import Product, Category, Review
 from django.views.generic import ListView, DetailView, UpdateView, \
     CreateView, DeleteView
 
@@ -84,3 +84,21 @@ class ProductDelete(SuperUserRequiredMixin, DeleteView):
     def form_valid(self, form):
         messages.success(self.request, 'Product deleted successfully!')
         return super(ProductDelete, self).form_valid(form)
+
+
+# Reviews
+
+class CreateReview(LoginRequiredMixin, CreateView):
+    model = Review
+    fields = 'name', 'rating', 'title', 'review'
+    template_name = '../templates/products/create_review.html'
+    context_object_name = 'createreview'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        form.instance.productname = Product.objects.get(pk=self.kwargs['pk'])
+        messages.success(self.request, 'You have left a review!')
+        return super(CreateReview, self).form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy('productdetail', kwargs={'pk': self.kwargs['pk']})
