@@ -102,3 +102,19 @@ class CreateReview(LoginRequiredMixin, CreateView):
 
     def get_success_url(self):
         return reverse_lazy('productdetail', kwargs={'pk': self.kwargs['pk']})
+
+
+class DeleteReview(SuperUserRequiredMixin, DeleteView):
+    """
+    For admin users to delete reviews
+    """
+    model = Review
+    template_name = '../templates/products/delete_review.html'
+
+    def form_valid(self, form):
+        messages.success(self.request, 'Review deleted')
+        return super(DeleteReview, self).form_valid(form)
+
+    def get_success_url(self):
+        self.product_pk = self.get_object().productname.pk
+        return reverse_lazy('productdetail', kwargs={'pk': self.product_pk})
