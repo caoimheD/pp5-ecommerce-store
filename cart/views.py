@@ -9,14 +9,12 @@ from django.contrib import messages
 # Create your views here.
 
 
-@login_required
 def cart(request):
     """ Displays cart page """
 
     return render(request, 'cart/cart.html')
 
 
-@login_required
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the cart """
 
@@ -35,7 +33,6 @@ def add_to_cart(request, item_id):
     return redirect(redirect_url)
 
 
-@login_required
 def edit_cart(request, item_id):
     """Adjust the quantity of an item"""
 
@@ -50,7 +47,6 @@ def edit_cart(request, item_id):
     return redirect('cart')
 
 
-@login_required
 def remove_from_cart(request, item_id):
     """Delete an item from the cart"""
 
