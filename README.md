@@ -22,13 +22,19 @@
 Live site link: https://.herokuapp.com/
 
 <a name="uxdesign"></a>
-## UX Design
+## UX Design and project rationale
 
-Theme, Epic and User Stories
+E-commerce business model
 
-This website is an e-commerce store that sells books. The e-commerce model is B2C, business to customer. All types of books are sold and users can browse by category or by all books. 
+This website is an e-commerce store that sells books. The e-commerce model is B2C, business to customer. Different categories of books are sold on this site and users can browse by a specific category or by all books. 
 
-The site's targeted user is therefore anyone who is interested in reading and books, and is looking to purchase new books. The site offers a delivery service, at a cost, which users are made aware of when viewing their basket and checking out.
+The site's targeted user is therefore anyone who is interested in reading or in collecting books, and is therefore looking to purchase new books. The site offers a delivery service, at an additional cost, which users are made aware of when viewing their basket and checking out.
+
+The B2C business model that the application is built on allows customers to order goods through the website. These orders are then received by the business and processed according to the information submitted by the customer. Once the order processing is complete, the business supplies the goods to the customer through a delivery service. The customer then receives the items that they ordered, completing the business model cycle. This process is then repeated for each new order that the business receives. This application provides physical books to customers and the value of them books is the price shown on the website.
+
+The purpose of this website is the sale of physical books, which are then delivered to customers who complete the purchase on the website.
+
+User Stories
 
 The User Stories can be found in Github Projects (pp5-ecommerce-store -> Projects -> pp5-eccomerce-store or ) and are displayed in the Kanban board format. Each user story has an acceptance criteria and tasks. The User Stories are divided by site role, as different roles can perform different actions:
 
@@ -49,6 +55,12 @@ Registered users
 Admin users
 - As an admin user I can create, view, update and delete products so that I can manage the store
 - As a site admin I can delete reviews so that old or spam reviews can be removed
+
+Wireframes and design
+
+The design is a simple layout, but with some bright colours to keep the pages interesting. The header image contains pages of books, to keep with the theme of the book shop. The colour palatte was chosen from coolors.co, based on the colours from the header image.
+
+SEO and digital marketing
 
 <a name="features"></a>
 ## Features
@@ -104,6 +116,13 @@ Clicking on 'secure checkout' will take site users to the checkout page.
 <a name="checkout"></a>
 ### Checkout
 
+The checkout page consists of a form and card payment box, along with a summary of the order that is being placed. If the user is logged out or not registered, there is an option under the form to create an account or sign in to save the information they have put in the form. If the user is logged in, this gives them the option to check a box to save this information to their profile.
+
+If users have previously saved delivery or contact information to their profile, this will display automatically in the form.
+
+The payment box connects to Stripe and processes the card payment. For the purposes of this project, the Stripe test card number was used.
+
+When users have entered in their information and reviewed their order, they can click on complete order which takes them to a success page if the form and payment go through. The checkout success page gives them a summary of the order along with an order number. Details are also sent by email to the email address provided in the form.
 
 <a name="technologies"></a>
 ## Technologies
@@ -121,6 +140,8 @@ Homepage
 | Action        | Expected Behaviour  | Result | 
 | ------------- | ------------- | ------------- | 
 | Enter url of site in browser  | site shows homepage | pass | 
+
+Role-based functionality
 
 <a name="validatortesting"></a>
 ### Validator testing
