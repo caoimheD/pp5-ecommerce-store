@@ -118,3 +118,17 @@ class DeleteReview(SuperUserRequiredMixin, DeleteView):
     def get_success_url(self):
         self.product_pk = self.get_object().productname.pk
         return reverse_lazy('productdetail', kwargs={'pk': self.product_pk})
+
+# class ReviewList(LoginRequiredMixin, ListView):
+    """
+    For users to view their own reviews
+    """
+#    model = Review
+#    template_name = '../templates/profiles/profile.html'
+#    context_object_name = 'myreviews'
+
+#    def get_context_data(self, **kwargs):
+#        context = super().get_context_data(**kwargs)
+#        context['myreviews'] = \
+#            context['myreviews'].filter(user=self.request.user)
+#        return context
