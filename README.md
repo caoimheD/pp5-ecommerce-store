@@ -62,6 +62,8 @@ The design is a simple layout, but with some bright colours to keep the pages in
 
 SEO and digital marketing
 
+![Alt text](/media/wireframe_fb.jpg "Optional Title")
+
 <a name="features"></a>
 ## Features
 

@@ -61,11 +61,15 @@
         <li class="list-group-item bookdetails">Title: {{ productdetails.title }}</li>
         <li class="list-group-item bookdetails">Author: {{ productdetails.author }}</li>
         <li class="list-group-item bookdetails">Description: {{ productdetails.description }}</li>
-        <li class="list-group-item bookdetails">ISBN: {{ productdetails.sku }}</li>
+        <li class="list-group-item bookdetails">ISBN: {{ productdetails.isbn }}</li>
+        <li class="list-group-item bookdetails">Pages {{ productdetails.pages }}</li>
+        <li class="list-group-item bookdetails">Year: {{ productdetails.year }}</li>
+        <li class="list-group-item bookdetails">Publisher: {{ productdetails.publisher }}</li>
       </ul>
       <br>
     </div>
-
+  </div>
+<div class="row">
     <div class="col-sm">
       <!-- Reviews -->
       <h4>Reviews</h4>
@@ -87,6 +91,7 @@
         aria-pressed="true">Review this book</a>
       <br>
     </div>
+  </div>
   </div>
 
 
