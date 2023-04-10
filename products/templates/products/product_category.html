@@ -13,17 +13,16 @@
 
   <div class="row">
     {% for product in categorydetails.product_set.all %}
-    <div class="col-2 text-center" style="display: flex;">
+    <div class="col-6 col-sm-3 text-center" style="display: flex;">
       <div class="card product">
         {% if product.image %}
-        <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.title }}">
+        <img src="{{ product.image.url }}" class="card-img-top img-fluid productimg" alt="{{ product.title }}">
         {% else %}
-        <img class="card-img-top img-fluid" src="{% static 'media/blank.jpg' %}" alt="{{ product.title }}">
+        <img class="card-img-top img-fluid productimg" src="{{MEDIA_URL}}blank.jpg" alt="{{ product.title }}">
         {% endif %}
 
         <h5 class="card-title">{{ product.title }}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ product.author }}</h6>
-        <h6 class="card-subtitle mb-2 text-muted">{{ product.category }}</h6>
         <h6 class="card-subtitle mb-2 text-muted">{{ product.price }}</h6>
         <a href="{% url 'productdetail' product.id %}" class="card-link">See more</a>
       </div>
