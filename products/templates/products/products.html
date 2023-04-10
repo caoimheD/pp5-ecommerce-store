@@ -9,7 +9,9 @@
 
 <div class="container-fluid">
   <h4> All Books </h4>
+  {% if request.user.is_superuser %}
   <a href={% url 'createproduct' %} class="button btn-lg active" role="button" aria-pressed="true">New</a>
+  {% endif %}
   <div class="row">
 
     <div class="col text-center" style="display: flex;">
