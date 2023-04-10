@@ -13,28 +13,28 @@
   <a href={% url 'createproduct' %} class="button btn-lg active" role="button" aria-pressed="true">New</a>
   {% endif %}
   <div class="row">
-
-    <div class="col text-center" style="display: flex;">
+    {% for product in products %}
+    <div class="col-2 text-center" style="display: flex;">
       
-      {% for product in products %}
       <div class="card product">
         {% if product.image %}
-        <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.title }}"
+        <img src="{{ product.image.url }}" class="card-img-top img-fluid alt="{{ product.title }}"
           style="width: 15rem;">
         {% else %}
         <img class="card-img-top img-fluid" src="{% static 'media/blank.jpg' %}" alt="{{ product.title }}"
           style="width: 15rem;">
         {% endif %}
-
+        
         <h5 class="card-title">{{ product.title }}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ product.author }}</h6>
         <h6 class="card-subtitle mb-2 text-muted">{{ product.category }}</h6>
         <h6 class="card-subtitle mb-2 text-muted">{{ product.price }}</h6>
         <a href="{% url 'productdetail' product.id %}" class="card-link">See more</a>
+        
       </div>
-
-      {% endfor %}
+      
     </div>
+    {% endfor %}
   </div>
 </div>
 <br>
