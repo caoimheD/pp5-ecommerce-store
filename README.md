@@ -5,6 +5,8 @@
     - [Navigation](#navigation)
     - [Accounts](#accounts)
     - [Products](#products)
+    - [Reviews](#reviews)
+    - [Profile](#profile)
     - [Cart](#cart)
     - [Checkout](#checkout)
 4. [Testing](#testing)
@@ -96,11 +98,29 @@ Products can be accessed either by the 'shop now' button on the homepage or thro
 
 For the purposes of this website, stock images have been used as the book images.
 
-On the products page, both for all books and for each category, users see cards with brief information about each book. This information is the title, author, category and price, along with an image. For each book, there is an option to click on 'see more', which brings to the product details page. There is an option on this page to add new products. This is available to admins only and allows them to add new products to the store.
+On the products page, both for all books and for each category, users see cards with brief information about each book. This information is the title, author, category and price, along with an image. For each book, there is an option to click on 'see more', which brings to the product details page. There is an option on this page to add new products. This is available to admins only and allows them to add new products to the store. This button is not visible to regular site users.
 
 The product details page contains more detailed information about each book, such as a description, ISBN number and reviews. There is an option to add the book to cart, along with a quantity box to specify how many of each product the user wants.
 
 There are two admin buttons on this page, edit and delete. These are accessible to admins only and allow to either update the product or delete it. 
+
+<a name="reviews"></a>
+### Reviews
+
+The purpose of this feature is to allow users to leave reviews on products. It is not necessary for the user to have purchased the book to be able to review it. It is however necessary that they are registered with an account.
+
+Users are asked to provide a rating, a title and a comment. They also type in a name, in case they would like to use a different name to the one associated with their profile. The user and book fields are automatically filled in and hidden from the user form.
+
+Once the review is submitted, it appears on the book detail page. Reviews do not get approved so there is no wait time. Users cannot edit or delete their reviews. Currently, only site admins are allowed to delete reviews. The delete button is only visible when logged in as a site admin.
+
+<a name="profile"></a>
+### Profile
+
+This section of the website is where users can see all of their information, and one of the benefits they receive when signing up for an account. Users can see and update their default delivery information. This is useful if they want to change their default address, or just have this auto-fill with their details when checking out.
+
+Next to the delivery details is a section that contains their previous orders. This is a great way for users to track how many purchases they have made and which books them have bought. When clicking on the order number, this brings them to a page with that order information.
+
+Users can also see their reviews on their profile page. They can see the product they reviewed, the rating, title and review comment. The purpose of this section is that users are able to also keep track of any reviews they have made, without having to search for the book and click into the book details page.
 
 <a name="cart"></a>
 ### Cart
@@ -109,7 +129,7 @@ Users can get to the cart page from the navigation menu by clicking on 'cart'.
 
 If there are no items in the cart, users will see text saying 'Your cart is empty.' and a button to go back to the products page.
 
-Once users have added in an item, they will see an image of the item, the title and author, quantity and price. Users can interact with this page by either updating the quantity (changing the number in the box and then clicking update), or deleting the item from the basket by clicking on the bin icon. The price displayed here is for one of each item, so the price will stay the same regardless of quantity.
+Once users have added in an item and then navigate to the cart, they will see an image of the item, the title and author, quantity and price. Users can interact with this page by either updating the quantity (changing the number in the box and then clicking update), or deleting the item from the basket by clicking on the bin icon. The price displayed here is for one of each item, so the price will stay the same regardless of quantity.
 
 Under this box, users see the delivery and total cost information. This will update automatically when the quantity is changed (the 'cart total' heading). There is a fixed delivery cost of 5 EURO per order, this can be seen after the 'delivery' heading. There is then a total, which is the total of the cart plus the delivery fee. Users are also provided with information about free delivery, and how much more they would need to spend to qualify for it.
 
@@ -129,6 +149,59 @@ When users have entered in their information and reviewed their order, they can 
 <a name="technologies"></a>
 ## Technologies
 
+- Python
+
+The following python modules were installed and used:
+
+asgiref==3.6.0
+
+backports.zoneinfo==0.2.1
+
+cloudinary==1.32.0
+
+dj-database-url==1.2.0
+
+dj3-cloudinary-storage==0.0.6
+
+Django==3.2.18
+
+django-allauth==0.52.0
+
+django-countries==7.2.1
+
+django-crispy-forms==1.14.0
+
+gunicorn==20.1.0
+
+oauthlib==3.2.2
+
+Pillow==9.4.0
+
+psycopg2==2.9.5
+
+PyJWT==2.6.0
+
+python3-openid==3.2.0
+
+pytz==2022.7.1
+
+requests-oauthlib==1.3.1
+
+sqlparse==0.4.3
+
+stripe==5.3.0
+
+- CSS and Bootstrap
+- HTML
+- Heroku: The app and website are deployed to Heroku
+- ElephantSQL: ElephantSQL was used to create and host the database.
+- Fontawesome: icons
+- JavaScript
+- jQuery
+- Django
+- Balasmiq
+- Google Fonts
+
 <a name="testing"></a>
 ## Testing
 
@@ -143,7 +216,52 @@ Homepage
 | ------------- | ------------- | ------------- | 
 | Enter url of site in browser  | site shows homepage | pass | 
 
+Products
+
+| Action        | Expected Behaviour  | Result | 
+| ------------- | ------------- | ------------- | 
+| Enter url of site in browser  | site shows homepage | pass | 
+
+Shopping cart
+
+| Action        | Expected Behaviour  | Result | 
+| ------------- | ------------- | ------------- | 
+| Enter url of site in browser  | site shows homepage | pass | 
+
+Checkout and payments
+
+| Action        | Expected Behaviour  | Result | 
+| ------------- | ------------- | ------------- | 
+| Enter url of site in browser  | site shows homepage | pass | 
+
+User profiles
+
+| Action        | Expected Behaviour  | Result | 
+| ------------- | ------------- | ------------- | 
+| Enter url of site in browser  | site shows homepage | pass | 
+
 Role-based functionality
+
+| Action        | Expected Behaviour  | Result | 
+| ------------- | ------------- | ------------- | 
+| Add new book button | visible to superuser only | pass | 
+| Edit a book button | visible to superuser only | pass |
+| Delete a book button | visible to superuser only | pass |
+| Add new book | form works only for superuser | pass | 
+| Edit a book | form works only for superuser | pass | 
+| Delete a book | form works only for superuser | pass | 
+
+Additional testing for role-based functionality:
+
+Login as regular users and see if admin buttons are visible (confirm they are not visible).
+
+Login as regular user and try URL of admin product forms (add, edit, delete products) in browser and confirm that an error page is displayed.
+
+Login as regular user and try URL of admin review (delete review button) in browser and confirm that an error page is displayed.
+
+Try all admin URLS as a logged out user/non registered user and confirm that an error page is displayed.
+
+Login as superuser and confirm links are visible, try adding, editing, delete products and deleting reviews.
 
 <a name="validatortesting"></a>
 ### Validator testing
@@ -174,4 +292,48 @@ Python testing was done in Gitpod, with errors showing a red underscore and also
 <a name="credits"></a>
 ## References
 
-https://mdbootstrap.com/docs/standard/extended/shopping-carts/
+Bootstrap theme for shopping cart page inspired from: https://mdbootstrap.com/docs/standard/extended/shopping-carts/
+
+Checkout and payments workflow (including webhooks and stripe_elements javascript) is from Code Institute walkthrough project Boutique Ado and from the Stripe documentation (https://stripe.com/docs/payments/quickstart).
+
+Book images are all stock images from stock site unsplash.com, below are the links:
+
+Narnia: https://unsplash.com/photos/xG5VJW-7Bio
+
+How innovation works: https://unsplash.com/photos/H-LIL57PHCc
+
+Psychology of money: https://unsplash.com/photos/aZ_MmSmAcjg
+
+Milk and honey: https://unsplash.com/photos/CXYPfveiuis
+
+Company of one: https://unsplash.com/photos/ViMrMawjj7s
+
+Dorian gray: https://unsplash.com/photos/1i-P178kxHQ
+
+The two towers: https://unsplash.com/photos/O7ygzpAL4Mc
+
+Storytelling workbook: https://unsplash.com/photos/7Nir5-XIRVM
+
+Kinfolk table: https://unsplash.com/photos/tfYL1j1jKNo
+
+101 essays: https://unsplash.com/photos/V5BGaJ0VaLU
+
+Stop worrying: https://unsplash.com/photos/UMlXDGxY6Kc
+
+Sun and her flowers: https://unsplash.com/photos/oKbHnbz2njQ
+
+Heart is the sea: https://unsplash.com/photos/XvMiIGJFKwc
+
+Zero to one; https://unsplash.com/photos/JIWPWcUnhUs
+
+Failed it: https://unsplash.com/photos/RARH8b7N-fw
+
+King of scars: https://unsplash.com/photos/NILnFXRqlr4
+
+Stormbreaker: https://unsplash.com/photos/dBFF-g2MhoE
+
+Lighthouse: https://unsplash.com/photos/7gV36AfCLEM
+
+These images are "Free to use under the Unsplash License" (text from unsplash website).
+
+Workflow for the foundation of the profiles app is from Code Institute Boutique Ado project. Additional features were added to this.

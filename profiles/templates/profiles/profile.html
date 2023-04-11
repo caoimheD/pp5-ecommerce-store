@@ -85,19 +85,20 @@
             </ul>
             {% endfor %}
             <br>
-           <p>Want to remove a review?
-            <a href="" class="btn addcart">Contact us </a></p>
+            <p>Want to remove a review?
+                <a href="" class="btn addcart">Contact us</a>
+            </p>
         </div>
     </div>
 </div>
 
-    {% endblock %}
+{% endblock %}
 
-    <!-- Success messages timeout -->
-    <script>
-        setTimeout(function () {
-            let messages = document.getElementById('msg');
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 3000);
-    </script>
+<!-- Success messages timeout -->
+<script>
+    setTimeout(function () {
+        let messages = document.getElementById('msg');
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+    }, 3000);
+</script>
