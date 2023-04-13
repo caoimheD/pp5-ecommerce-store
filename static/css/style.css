@@ -110,3 +110,12 @@ h3, h4 {
     height: 30vw;
     object-fit: cover;
 }
+
+/* Mailchimp */
+
+#mc_embed_signup {
+    background: #fff;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 600px;
+    margin: auto;
+}
