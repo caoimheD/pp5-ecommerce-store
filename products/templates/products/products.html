@@ -2,22 +2,24 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
 {% endblock %}
 
 {% block content %}
 
 <div class="container-fluid">
   <h4> All Books </h4>
+
+  <!--Add products-->
   {% if request.user.is_superuser %}
-  <a href={% url 'createproduct' %} class="button btn-lg active" role="button" aria-pressed="true">New</a>
+  <a href={% url 'createproduct' %} class="button btn-lg active" role="button" aria-pressed="true">Add</a>
   {% endif %}
+
+  <!--Display products-->
   <div class="row">
     {% for product in products %}
     <div class="col-6 col-sm-3 text-center" style="display: flex;">
-      
       <div class="card product">
-        
+
         {% if product.image %}
         <img src="{{ product.image.url }}" class="card-img-top img-fluid productimg" alt="{{ product.title }}">
         {% else %}
@@ -29,9 +31,8 @@
         <h6 class="card-subtitle mb-2 text-muted">{{ product.category }}</h6>
         <h6 class="card-subtitle mb-2 text-muted">€{{ product.price }}</h6>
         <a href="{% url 'productdetail' product.id %}" class="card-link">See more</a>
-        
+
       </div>
-      
     </div>
     {% endfor %}
   </div>

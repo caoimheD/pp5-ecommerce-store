@@ -54,11 +54,12 @@
 </head>
 
 <body>
-  <!-- Links -->
+  <!-- Links and navigation -->
   <ul class="nav justify-content-end topnav">
     <li class="nav-item">
       <a class="nav-link links" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Home</a>
     </li>
+    <!-- Products dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle links" data-toggle="dropdown" href="" role="button" aria-haspopup="true"
         aria-expanded="false"><i class="fa-solid fa-book"></i> Books</a>
@@ -69,6 +70,7 @@
         {% endfor %}
       </div>
     </li>
+    <!-- Account dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle links" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
         aria-expanded="false"><i class="fa-solid fa-user"></i> Account</a>
@@ -83,6 +85,7 @@
         {% endif %}
       </div>
     </li>
+    <!-- Cart -->
     <li class="nav-item">
       <a class="nav-link links" href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
     </li>

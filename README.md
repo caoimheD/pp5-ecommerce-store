@@ -21,7 +21,7 @@
 
 ![Mockup]( "Mockup")
 
-Live site link: https://.herokuapp.com/
+Live site link: https://ecommerce-store-pp5.herokuapp.com/
 
 <a name="uxdesign"></a>
 ## UX Design and project rationale
@@ -63,6 +63,14 @@ Wireframes and design
 The design is a simple layout, but with some bright colours to keep the pages interesting. The header image contains pages of books, to keep with the theme of the book shop. The colour palatte was chosen from coolors.co, based on the colours from the header image.
 
 SEO and digital marketing
+
+The workspace contains a sitemap.xml and robots.txt file to assist search engines. The robots.txt file disallows any pages with sensitive information.
+
+SEO best practices have been implemented, such as aria-label, rel and alt attributes. Keywords and description have been included in the head of the base template.
+
+On the homepage, there is a newsletter that site users can sign up to to receive updates, discounts and information on new products. This is done with Mailchimp. When a user enters their email, they will be added to the Mailchimp list.
+
+A Facebook page was created for the purposes of digital marketing (please note for the purposes of this project this is a mockup image):
 
 ![Alt text](/media/wireframe_fb.jpg "Optional Title")
 
@@ -214,19 +222,63 @@ Homepage
 
 | Action        | Expected Behaviour  | Result | 
 | ------------- | ------------- | ------------- | 
-| Enter url of site in browser  | site shows homepage | pass | 
+| Enter url of site in browser  | site loads media and static files | pass | 
+| Click on nav bar links  | each link opens expected page | pass | 
+| Click 'register' button  | directs to register page | pass | 
+| Click 'shop now' button  | directs to products page | pass | 
+| Subscribe to newsletter  | success message, email visible in Mailchimp | pass | 
+| Click on the Facebook icon in footer  | directs to Facebook in new tab | pass | 
+
+Additional testing:
+
+Enter random characters in Mailchimp signup form - receive error message as expected
+
+Attempt to login with fake credentials - receive error message as expected
+
+Attempt to register for an account without email/username/password field - receive error message as expected
 
 Products
 
 | Action        | Expected Behaviour  | Result | 
 | ------------- | ------------- | ------------- | 
-| Enter url of site in browser  | site shows homepage | pass | 
+| 'All books' link on nav bar  | displays page with all products | pass | 
+| 'Category' link on nav bar  | displays page with only selected category | pass | 
+| Browse products page  | cards show book preview with image | pass | 
+| Browse products page  | all cards have a 'see more' link to details page | pass | 
+| Use the add button (admin only)  | form opens to add a new product | pass | 
+
+
+Product details
+
+| Action        | Expected Behaviour  | Result | 
+| ------------- | ------------- | ------------- | 
+| Browse page  | list of book information is displayed | pass | 
+| Browse page  | image, title and price are displayed | pass | 
+| Browse page  | reviews are visible at the bottom of page | pass | 
+| Quantity/add to cart button | adds the specified quantity of item to the cart | pass | 
+| Review button  | if logged in, opens form to leave a review | pass | 
+| Complete review form  | review is visible on the page | pass | 
+
+Additional testing:
+
+Click on 'review this book' while not logged in/not registered - redirected to login page as expected
+
+Fill in review form but leave fields blank - expected error message is displayed
 
 Shopping cart
 
 | Action        | Expected Behaviour  | Result | 
 | ------------- | ------------- | ------------- | 
-| Enter url of site in browser  | site shows homepage | pass | 
+| Open cart without adding any items  | 'your cart is empty' message | pass | 
+| Open cart after adding items  | cart shows items that were added (image, title, author quantity, price) | pass | 
+| Open cart after adding items  | cart shows price breakdown (cart total, delivery, final total) | pass | 
+| Open cart after adding items (under 30EUR)  | cart shows additional amount needed for free shipping | pass | 
+| Change quantity and click 'update'  | cart total price updates | pass | 
+| Change quantity and click 'update'  | item quantity updates | pass | 
+| Click delete icon | item is removed from cart | pass | 
+| Click delete icon  | cart total price updates (if other items in cart) | pass | 
+| Click delete icon  | 'your cart is empty' message (if no other items in cart) | pass | 
+| Click secure checkout  | directs to checkout page with saved cart info | pass | 
 
 Checkout and payments
 
@@ -324,7 +376,7 @@ Sun and her flowers: https://unsplash.com/photos/oKbHnbz2njQ
 
 Heart is the sea: https://unsplash.com/photos/XvMiIGJFKwc
 
-Zero to one; https://unsplash.com/photos/JIWPWcUnhUs
+Zero to one: https://unsplash.com/photos/JIWPWcUnhUs
 
 Failed it: https://unsplash.com/photos/RARH8b7N-fw
 
@@ -337,3 +389,5 @@ Lighthouse: https://unsplash.com/photos/7gV36AfCLEM
 These images are "Free to use under the Unsplash License" (text from unsplash website).
 
 Workflow for the foundation of the profiles app is from Code Institute Boutique Ado project. Additional features were added to this.
+
+The description of the books in the product details page is from amazon.co.uk

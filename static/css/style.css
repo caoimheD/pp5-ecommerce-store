@@ -107,15 +107,16 @@ h3, h4 {
 
 .productimg {
     width: 100%;
-    height: 30vw;
+    height: 28vw;
     object-fit: cover;
 }
 
 /* Mailchimp */
 
 #mc_embed_signup {
-    background: #fff;
+    background: #F2F4F3;
+    border-top: 1px solid #D95950; 
     font: 14px Helvetica, Arial, sans-serif;
-    width: 600px;
+    max-width: 600px;
     margin: auto;
 }
