@@ -1,5 +1,5 @@
 .header {
-    background-image: url(https://res.cloudinary.com/dfxa3zs1q/image/upload/v1680718358/static/media/booksfaded.6d7806c569f5.jpg);
+    background-image: url("https://res.cloudinary.com/dfxa3zs1q/image/upload/v1680718358/static/media/booksfaded.6d7806c569f5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: #1C1D21;
