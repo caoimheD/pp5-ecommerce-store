@@ -284,9 +284,48 @@ Checkout and payments
 
 | Action        | Expected Behaviour  | Result | 
 | ------------- | ------------- | ------------- | 
-| Enter url of site in browser  | site shows homepage | pass | 
+| Load checkout page  | cart summary shows | pass | 
+| Load checkout page  | price summary shows | pass | 
+| Load checkout page  | contact and delivery form shows | pass |
+| Load checkout page  | stripe card payment box displays | pass |
+| Complete form and enter stripe test card number  | redirected to success page | pass |
+| Complete form and enter stripe test card number  | event recorded on stripe dashboard | pass | 
+| View success page | summary of order and contact/delivery info displayed | pass |
+
+Additional testing:
+
+Complete card payment with Stripe test number 4242 4242 4242 4242 - works as expected
+
+Complete card payment with incorrect card details (e.g. 1111 1111 1111 1111) - error shows
+
+Complete card payment with Stripe test number for declined cards 4000 0000 0000 9995 - error shows as expected
+
+Complete card payment with Stripe test number for authentication required 4000 0025 0000 3155 - auth form displays
+
+Attempt to submit form with missing required fields - error shows stating field is required
+
+Attempt to access /checkout url (without going through website and cart) - 
+
+Stripe dashboard events tracking and webhook details - view transactions made and ensure they are being registered and are successful.
 
 User profiles
+
+| Action        | Expected Behaviour  | Result | 
+| ------------- | ------------- | ------------- | 
+| Use 'my profile' link on nav bar  | profile page displays | pass | 
+| Edit the delivery info and click update  | details save and show when returning to page | pass |
+| Checkout after filling in info in profile | saved delivery info auto populates | pass |
+| View profile page | list of previous orders are displayed | pass |
+| Click on order number | page with summary of order is displayed | pass |
+| View profile page | user's reviews are displayed | pass |
+
+Additional testing:
+
+Use URL of a user's profile, without being logged in - redirected to login page as expected
+
+Compare different user's profile pages to ensure they display unique information and users are not able to see other user's information.
+
+Reviews
 
 | Action        | Expected Behaviour  | Result | 
 | ------------- | ------------- | ------------- | 

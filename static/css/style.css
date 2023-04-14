@@ -1,5 +1,5 @@
 .header {
-    background-image: url("https://res.cloudinary.com/dfxa3zs1q/image/upload/v1680718358/static/media/booksfaded.6d7806c569f5.jpg");
+    background-image: url("https://res.cloudinary.com/dfxa3zs1q/image/upload/c_scale,w_1034/v1680718358/static/media/booksfaded.6d7806c569f5.webp");
     background-size: cover;
     background-repeat: no-repeat;
     color: #1C1D21;
@@ -8,6 +8,10 @@
 h1 {
     text-shadow: 2px 2px 5px #D95950;
   }
+
+.homeimg {
+    opacity: 0.9;
+}
 
 .links {
     text-decoration: none;
