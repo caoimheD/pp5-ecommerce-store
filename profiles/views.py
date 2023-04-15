@@ -8,6 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import UserProfile, contact
 from .forms import UserProfileForm
 from checkout.models import Order
+from products.models import Review
 
 
 def profile(request):
@@ -48,22 +49,28 @@ def order_history(request, order_number):
 
     return render(request, template, context)
 
-# Contact
+# Contact (users requesting removal of reviews)
+
 
 class CreateContact(LoginRequiredMixin, CreateView):
     model = contact
     fields = 'email', 'review', 'message'
     template_name = '../templates/profiles/contact.html'
     context_object_name = 'contacthere'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        #context['userreview'] = user.review_set.all
-        return context
+    
+    def get_form(self, *args, **kwargs):
+        """
+        Restricts the FK dropdown to only the logged in user's reviews
+        """
+        form = super(CreateContact, self).get_form(*args, **kwargs)
+        form.fields['review'].queryset = self.request.user.review_set.all()
+        return form 
 
     def form_valid(self, form):
+        """
+        Auto-fills the 'user' field of the form + success message
+        """
         form.instance.user = self.request.user
-        form.instance.review = user.review_set.all
         messages.success(self.request, 'Request sent!')
         return super(CreateContact, self).form_valid(form)
 
