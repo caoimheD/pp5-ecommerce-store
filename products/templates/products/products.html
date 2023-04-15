@@ -21,7 +21,7 @@
       <div class="card product">
 
         {% if product.image %}
-        <img src="{{ product.image.url }}" class="card-img-top img-fluid productimg" alt="{{ product.title }}">
+        <img src="{{ product.image_url }}" class="card-img-top img-fluid productimg" alt="{{ product.title }}">
         {% else %}
         <img class="card-img-top img-fluid" src="{{MEDIA_URL}}blank.jpg" alt="{{ product.title }}">
         {% endif %}

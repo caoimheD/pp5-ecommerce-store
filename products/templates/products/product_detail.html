@@ -35,7 +35,7 @@
       {% endif %}
       <br>
       {% if productdetails.image %}
-      <img src="{{ productdetails.image.url }}" alt="{{ product.title }}" class="img-fluid card-img-top image">
+      <img src="{{ productdetails.image_url }}" alt="{{ product.title }}" class="img-fluid card-img-top image">
       {% else %}
       <img class="card-img-top img-fluid image" src="{% static 'media/blank.jpg' %}" alt="{{ product.title }}">
       {% endif %}

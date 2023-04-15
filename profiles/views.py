@@ -1,7 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.views.generic import ListView, DetailView, UpdateView, \
+    CreateView, DeleteView
+from django.urls import reverse, reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .models import UserProfile
+from .models import UserProfile, contact
 from .forms import UserProfileForm
 from checkout.models import Order
 
@@ -43,3 +47,25 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+# Contact
+
+class CreateContact(LoginRequiredMixin, CreateView):
+    model = contact
+    fields = 'email', 'review', 'message'
+    template_name = '../templates/profiles/contact.html'
+    context_object_name = 'contacthere'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        #context['userreview'] = user.review_set.all
+        return context
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        form.instance.review = user.review_set.all
+        messages.success(self.request, 'Request sent!')
+        return super(CreateContact, self).form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy('profile')
