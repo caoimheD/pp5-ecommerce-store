@@ -62,6 +62,15 @@ Wireframes and design
 
 The design is a simple layout, but with some bright colours to keep the pages interesting. The header image contains pages of books, to keep with the theme of the book shop. The colour palatte was chosen from coolors.co, based on the colours from the header image.
 
+Homepage wireframe
+![Alt text](/media/wireframe1pp5.jpg "Optional Title")
+
+Product page wireframe
+![Alt text](/media/wireframe2pp5.jpg "Optional Title")
+
+Product details page wireframe
+![Alt text](/media/wireframe3pp5.jpg "Optional Title")
+
 SEO and digital marketing
 
 The workspace contains a sitemap.xml and robots.txt file to assist search engines. The robots.txt file disallows any pages with sensitive information.

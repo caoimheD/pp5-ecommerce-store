@@ -1,24 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
-{% endblock %}
-
 {% block content %}
 
 
 <div class="container-fluid">
   <h4> You are viewing category: {{ categorydetails.name }} </h4>
-
+  
   <div class="row">
     {% for product in categorydetails.product_set.all %}
     <div class="col-6 col-sm-3 text-center" style="display: flex;">
       <div class="card product">
+
         {% if product.image %}
         <img src="{{ product.image_url }}" class="card-img-top img-fluid productimg" alt="{{ product.title }}">
         {% else %}
-        <img class="card-img-top img-fluid productimg" src="{{MEDIA_URL}}blank.jpg" alt="{{ product.title }}">
+        <img class="card-img-top img-fluid productimg"
+          src="https://res.cloudinary.com/dfxa3zs1q/image/upload/c_scale,w_942/v1681585259/blank2_oqq9xh.webp"
+          alt="{{ product.title }}">
         {% endif %}
 
         <h5 class="card-title">{{ product.title }}</h5>

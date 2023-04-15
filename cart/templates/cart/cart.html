@@ -36,9 +36,9 @@
 
               <div class="col-md-2 col-lg-2 col-xl-2">
                 {% if item.product.image %}
-                <img src="{{ item.product.image.url }}" class="img-fluid rounded-3" alt="book cover">
+                <img src="{{ item.product.image_url }}" class="img-fluid rounded-3" alt="book cover">
                 {% else %}
-                <img class="card-img-top img-fluid" src="{% static 'media/blank.jpg' %}" alt="{{ product.title }}">
+                <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dfxa3zs1q/image/upload/c_scale,w_942/v1681585259/blank2_oqq9xh.webp" alt="{{ product.title }}">
                 {% endif %}
               </div>
 
