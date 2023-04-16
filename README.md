@@ -91,6 +91,8 @@ A Facebook page was created for the purposes of digital marketing (please note f
 
 The navigation bar is the place where site users can access all of the features of the website. Using the 'books' dropdown arrow, they can select to either view all books or view by category. Using the 'account' dropdown, they can either register for an account, login, or view their profile and logout.
 
+![Navigation](/media/navpp5.jpg "Navigation")
+
 The cart option on the navigation bar allows site users to click into their cart and view what they have added to it. 
 
 This navigation bar is available on all pages of the website, so users are never confused as to how to get back to a certain page or how to login/logout.
@@ -100,10 +102,13 @@ This navigation bar is available on all pages of the website, so users are never
 
 If a user is not registered or login, the account dropdown will show them the options 'register' and 'login'. Once user's are logged in, they will see 'my profile' and 'logout' in the account dropdown menu.
 
+![Account](/media/account1pp5.jpg "Account")
+![Account](/media/account2pp5.jpg "Account")
+
 The benefits of creating an account and having access to the profile page are:
 - This shows users a history of their past orders
 - Links they can click to see the full details of the orders
-- The option to udpate their delivery information 
+- The option to update their delivery information 
 - Ability to leave reviews on products. Once users have an account, they can navigate to any product and click on 'review this book'. There is no approval process for reviews, so these are visible in real time as soon as the user submits the form. 
 
 These benefits are explained on the homepage of the website, so users are aware of the reasons why they would need to create an account.
@@ -112,6 +117,8 @@ These benefits are explained on the homepage of the website, so users are aware 
 ### Products
 
 Products can be accessed either by the 'shop now' button on the homepage or through the dropdown menu 'books' on the navigation bar. If accessed through the navigation bar, users will see the option to browse by category or by all books.
+
+![Productsnav](/media/productspp5.jpg "Productsmenu")
 
 For the purposes of this website, stock images have been used as the book images.
 
@@ -126,9 +133,11 @@ There are two admin buttons on this page, edit and delete. These are accessible 
 
 The purpose of this feature is to allow users to leave reviews on products. It is not necessary for the user to have purchased the book to be able to review it. It is however necessary that they are registered with an account.
 
+![ReviewButton](/media/reviewbtn.jpg "ReviewButton")
+
 Users are asked to provide a rating, a title and a comment. They also type in a name, in case they would like to use a different name to the one associated with their profile. The user and book fields are automatically filled in and hidden from the user form.
 
-Once the review is submitted, it appears on the book detail page. Reviews do not get approved so there is no wait time. Users cannot edit or delete their reviews. Currently, only site admins are allowed to delete reviews. The delete button is only visible when logged in as a site admin.
+Once the review is submitted, it appears on the book detail page. Reviews do not get approved so there is no wait time. Users cannot edit or delete their reviews. Currently, only site admins are allowed to delete reviews. The delete button is only visible when logged in as a site admin. Users can request deletion through a form on their profile page, but this needs to be reviewed and actioned by site admins. They do not have the ability to directly delete from the website.
 
 <a name="profile"></a>
 ### Profile
@@ -138,6 +147,8 @@ This section of the website is where users can see all of their information, and
 Next to the delivery details is a section that contains their previous orders. This is a great way for users to track how many purchases they have made and which books them have bought. When clicking on the order number, this brings them to a page with that order information.
 
 Users can also see their reviews on their profile page. They can see the product they reviewed, the rating, title and review comment. The purpose of this section is that users are able to also keep track of any reviews they have made, without having to search for the book and click into the book details page.
+
+On the profile page, there is a contact button which is specifically for users to request removal of reviews. Please note that this does not automatically remove the review and it is expected behaviour that the review remains on the webiste after the form is submitted. Only admins can delete reviews directly from the site. The purpose of this contact form is for site users to request removal of a review. That request is then reviewed by site admins and actioned on accordingly. When clicking on the contact button, users will see fields for best contact email (in case they would like to be contacted on a different email to the one used with their account), a dropdown to select the review they want removed, and a message if they want to leave any comments or reasons. Users are only able to see their own reviews in the dropdown, this does not show all reviews of the website. This is not a report option for other site user's reviews, but just a way for users to request their review to be removed if they change their mind at a later date about the comments they made.
 
 <a name="cart"></a>
 ### Cart
@@ -338,7 +349,12 @@ Reviews
 
 | Action        | Expected Behaviour  | Result | 
 | ------------- | ------------- | ------------- | 
-| Enter url of site in browser  | site shows homepage | pass | 
+| Click 'review this book'  | review form opens | pass | 
+| Enter details and submit review  | review shows on product details page | pass | 
+| Click 'delete' (admin only)  | asked to confirm deletion, then review is deleted | pass | 
+| View profile page after leaving review  | logged in user's reviews show | pass | 
+| Click 'contact us' to request removal | form opens and dropdown shows user's reviews | pass |
+| Click 'contact us' to request removal | form submits when information is filled in and review selected | pass |
 
 Role-based functionality
 
@@ -368,16 +384,18 @@ Login as superuser and confirm links are visible, try adding, editing, delete pr
 
 HTML validator testing passed (https://validator.w3.org/)
 
-![HTML](static/media/htmlpp4.jpg "HTML")
+![HTML]( "HTML")
 
 CSS validator testing passed (https://jigsaw.w3.org/css-validator/)
 
-![CSS](static/media/csspp4.jpg "CSS")
+![CSS]( "CSS")
 
 Python testing was done in Gitpod, with errors showing a red underscore and also in the 'problems' tab. These could then be easily corrected as they arose. Currently there are no issues in the 'problems' tab and no errors showing on any of the pages.
 
 <a name="responsivetesting"></a>
 ### Responsiveness
+
+Bootstrap was used for most of the styling so this ensured that the css was already responsive. This was confirmed through the use of Chrome developer tools and adjusting to different devices. This was also manually done by adjusting the browser window size, without specifiying a particular device type.
 
 <a name="lighthousetesting"></a>
 ### Lighthouse
@@ -388,6 +406,12 @@ Python testing was done in Gitpod, with errors showing a red underscore and also
 
 <a name="deployment"></a>
 ## Deployment
+
+This website was deployed through Heroku. Cloudinary was used for static and media files.
+
+A new app was created in Heroku and then linked to the Github repository. The app was configured in the settings tab and the 'config vars' were set to include database information, along with Cloudinary, email and port details. The database URL points to the database in ElephantSQL. 
+
+Automatic deployments were enabled and a final manual deployment was also done, to ensure all changes on the repository were reflected on the final deployed version.
 
 <a name="credits"></a>
 ## References

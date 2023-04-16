@@ -22,7 +22,6 @@
 </div>
 
 <div class="container-fluid">
-
   <div class="row">
 
     <div class="col-sm-4 text-center">
@@ -38,7 +37,9 @@
       {% if productdetails.image %}
       <img src="{{ productdetails.image_url }}" alt="{{ product.title }}" class="img-fluid card-img-top image">
       {% else %}
-      <img class="card-img-top img-fluid image" src="https://res.cloudinary.com/dfxa3zs1q/image/upload/c_scale,w_942/v1681585259/blank2_oqq9xh.webp" alt="{{ product.title }}">
+      <img class="card-img-top img-fluid image"
+        src="https://res.cloudinary.com/dfxa3zs1q/image/upload/c_scale,w_942/v1681585259/blank2_oqq9xh.webp"
+        alt="{{ product.title }}">
       {% endif %}
       <br>
 
@@ -73,7 +74,7 @@
       <br>
     </div>
   </div>
-<div class="row">
+  <div class="row">
     <div class="col-sm">
       <!-- Reviews -->
       <h4>Reviews</h4>
@@ -90,32 +91,16 @@
         <a href={% url 'deletereview' review.id %}>Delete</a>
         {% endif %}
       </ul>
-      
+
       {% endfor %}
-      
+<br>
       <a href={% url 'createreview' productdetails.id %} class="btn addcart btn-link text-uppercase" role="button"
-        aria-pressed="true">Review this book</a>
-        <br>
+      aria-pressed="true">Review this book</a>
+
     </div>
-    
   </div>
-  </div>
-
-
-
 </div>
-
-
-
-
-<div class="row">
-
-</div>
-
-
-</div>
-
-
+<br>
 {% endblock %}
 
 <!-- Success messages timeout -->

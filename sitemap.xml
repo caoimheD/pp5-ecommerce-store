@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/categories/2/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/categories/1/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/categories/3/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/categories/4/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/cart/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/8/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/9/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/11/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/12/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/6/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/7/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/13/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/20/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/18/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/16/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/15/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/19/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/10/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/14/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/21/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/5/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/products/17/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/8/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/9/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/11/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/12/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/6/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/7/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/13/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/20/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/18/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/16/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/15/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/19/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/10/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/14/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/21/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/5/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=/products/17/newreview/</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F8%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F9%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F11%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F12%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F6%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F7%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F13%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F20%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F18%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F16%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F15%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F19%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F10%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F14%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F21%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F5%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/signup/?next=%2Fproducts%2F17%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F8%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F9%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F11%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F12%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F6%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F7%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F13%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F20%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F18%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F16%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F15%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F19%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F10%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F14%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F21%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F5%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecommerce-store-pp5.herokuapp.com/accounts/login/?next=%2Fproducts%2F17%2Fnewreview%2F</loc>
+  <lastmod>2023-04-16T09:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>
