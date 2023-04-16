@@ -83,6 +83,22 @@ A Facebook page was created for the purposes of digital marketing (please note f
 
 ![Alt text](/media/wireframe_fb.jpg "Optional Title")
 
+Database structure
+
+There are 7 models used in this website:
+
+| App        | Model  | Relationships | 
+| ------------- | ------------- | ------------- | 
+| Product  | Category | | 
+| Product  | Product | FK: Category | 
+| Product  | Review |FK: User, Product | 
+| Profiles  | UserProfile | OnetoOne User | 
+| Profiles  | Contact | FK: User | 
+| Checkout  | Order | FK: UserProfile | 
+| Checkout  | OrderLineItem | FK: Order, Product | 
+
+Based on these models and relationships, the django views and templates allow all of the backend and frontend features to be displayed and used. 
+
 <a name="features"></a>
 ## Features
 
@@ -113,6 +129,10 @@ The benefits of creating an account and having access to the profile page are:
 
 These benefits are explained on the homepage of the website, so users are aware of the reasons why they would need to create an account.
 
+When signing up, site users will enter in an email address. They receive a confirmation email to this address. Once they verify the email, their account will be active.
+
+![Signup](/media/signup.jpg "Signup")
+
 <a name="products"></a>
 ### Products
 
@@ -139,6 +159,8 @@ Users are asked to provide a rating, a title and a comment. They also type in a 
 
 Once the review is submitted, it appears on the book detail page. Reviews do not get approved so there is no wait time. Users cannot edit or delete their reviews. Currently, only site admins are allowed to delete reviews. The delete button is only visible when logged in as a site admin. Users can request deletion through a form on their profile page, but this needs to be reviewed and actioned by site admins. They do not have the ability to directly delete from the website.
 
+![Review](/media/reviewpp5.jpg "Review")
+
 <a name="profile"></a>
 ### Profile
 
@@ -148,7 +170,11 @@ Next to the delivery details is a section that contains their previous orders. T
 
 Users can also see their reviews on their profile page. They can see the product they reviewed, the rating, title and review comment. The purpose of this section is that users are able to also keep track of any reviews they have made, without having to search for the book and click into the book details page.
 
+![MyReviews](/media/myreviewspp5.jpg "MyReviews")
+
 On the profile page, there is a contact button which is specifically for users to request removal of reviews. Please note that this does not automatically remove the review and it is expected behaviour that the review remains on the webiste after the form is submitted. Only admins can delete reviews directly from the site. The purpose of this contact form is for site users to request removal of a review. That request is then reviewed by site admins and actioned on accordingly. When clicking on the contact button, users will see fields for best contact email (in case they would like to be contacted on a different email to the one used with their account), a dropdown to select the review they want removed, and a message if they want to leave any comments or reasons. Users are only able to see their own reviews in the dropdown, this does not show all reviews of the website. This is not a report option for other site user's reviews, but just a way for users to request their review to be removed if they change their mind at a later date about the comments they made.
+
+![RemoveReview](/media/remove.jpg "RemoveReview")
 
 <a name="cart"></a>
 ### Cart
@@ -159,7 +185,11 @@ If there are no items in the cart, users will see text saying 'Your cart is empt
 
 Once users have added in an item and then navigate to the cart, they will see an image of the item, the title and author, quantity and price. Users can interact with this page by either updating the quantity (changing the number in the box and then clicking update), or deleting the item from the basket by clicking on the bin icon. The price displayed here is for one of each item, so the price will stay the same regardless of quantity.
 
+![CartView](/media/cart.jpg "Cart")
+
 Under this box, users see the delivery and total cost information. This will update automatically when the quantity is changed (the 'cart total' heading). There is a fixed delivery cost of 5 EURO per order, this can be seen after the 'delivery' heading. There is then a total, which is the total of the cart plus the delivery fee. Users are also provided with information about free delivery, and how much more they would need to spend to qualify for it.
+
+![DeliveryPrice](/media/prices.jpg "DeliveryPrice")
 
 Clicking on 'secure checkout' will take site users to the checkout page.
 
