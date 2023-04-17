@@ -23,7 +23,9 @@
         {% if product.image %}
         <img src="{{ product.image_url }}" class="card-img-top img-fluid productimg" alt="{{ product.title }}">
         {% else %}
-        <img class="card-img-top img-fluid productimg" src="https://res.cloudinary.com/dfxa3zs1q/image/upload/c_scale,w_942/v1681585259/blank2_oqq9xh.webp" alt="{{ product.title }}">
+        <img class="card-img-top img-fluid productimg"
+          src="https://res.cloudinary.com/dfxa3zs1q/image/upload/c_scale,w_942/v1681585259/blank2_oqq9xh.webp"
+          alt="{{ product.title }}">
         {% endif %}
 
         <h5 class="card-title">{{ product.title }}</h5>

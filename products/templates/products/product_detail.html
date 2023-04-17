@@ -87,15 +87,17 @@
         <li class="list-group-item bookdetails">Title: {{ review.title }}</li>
         <li class="list-group-item bookdetails">Rating(out of 5): {{ review.rating }}</li>
         <li class="list-group-item bookdetails">Review: {{ review.review }}</li>
+
+        <!--Delete review-->
         {% if request.user.is_superuser %}
         <a href={% url 'deletereview' review.id %}>Delete</a>
         {% endif %}
       </ul>
-
       {% endfor %}
-<br>
+      <br>
+      <!--Add review-->
       <a href={% url 'createreview' productdetails.id %} class="btn addcart btn-link text-uppercase" role="button"
-      aria-pressed="true">Review this book</a>
+        aria-pressed="true">Review this book</a>
 
     </div>
   </div>
