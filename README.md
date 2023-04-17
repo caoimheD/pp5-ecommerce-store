@@ -19,7 +19,7 @@
 6. [Deployment](#deployment)
 7. [Content Credits](#credits)
 
-![Mockup]( "Mockup")
+![Mockup](/media/mockup1.png "Mockup")
 
 Live site link: https://ecommerce-store-pp5.herokuapp.com/
 
@@ -144,7 +144,11 @@ For the purposes of this website, stock images have been used as the book images
 
 On the products page, both for all books and for each category, users see cards with brief information about each book. This information is the title, author, category and price, along with an image. For each book, there is an option to click on 'see more', which brings to the product details page. There is an option on this page to add new products. This is available to admins only and allows them to add new products to the store. This button is not visible to regular site users.
 
+![Mockup](/media/categorymockup.png "Mockup")
+
 The product details page contains more detailed information about each book, such as a description, ISBN number and reviews. There is an option to add the book to cart, along with a quantity box to specify how many of each product the user wants.
+
+![Mockup](/media/detailsmockup.png "Mockup")
 
 There are two admin buttons on this page, edit and delete. These are accessible to admins only and allow to either update the product or delete it. 
 
@@ -356,7 +360,7 @@ Attempt to submit form with missing required fields - error shows stating field 
 
 Attempt to access /checkout url (without going through website and cart) - 
 
-Stripe dashboard events tracking and webhook details - view transactions made and ensure they are being registered and are successful.
+Stripe dashboard events tracking and webhook details - view transactions made and ensure they are being registered and are successful. Check webhook endpoint in Stripe dashboard and track events - ensure these are showing as succeeded.
 
 User profiles
 
@@ -412,7 +416,7 @@ Login as superuser and confirm links are visible, try adding, editing, delete pr
 <a name="validatortesting"></a>
 ### Validator testing
 
-HTML validator testing passed (https://validator.w3.org/)
+HTML validator testing was done for each HTML page of the website (https://validator.w3.org/)
 
 ![HTML]( "HTML")
 
@@ -420,7 +424,9 @@ CSS validator testing passed (https://jigsaw.w3.org/css-validator/)
 
 ![CSS]( "CSS")
 
-Python testing was done in Gitpod, with errors showing a red underscore and also in the 'problems' tab. These could then be easily corrected as they arose. Currently there are no issues in the 'problems' tab and no errors showing on any of the pages.
+Python testing was done in Gitpod, with errors showing a red underscore and also in the 'problems' tab.
+
+Javascript testing was done by testing the different functionalities, for example the success messages timeout.
 
 <a name="responsivetesting"></a>
 ### Responsiveness
@@ -430,9 +436,17 @@ Bootstrap was used for most of the styling so this ensured that the css was alre
 <a name="lighthousetesting"></a>
 ### Lighthouse
 
+Lighthouse testing was done through Chrome developer tools. Initially this returned a low score due to the size and dimentions of images. The images were then changed to be a smaller size and this improved the load times are scores.
+
+Result for homepage:
+
+Result for products page:
+
 
 <a name="othertesting"></a>
 ### Other testing
+
+The live website was opened on different browsers and features were used to confirm that they work on different browser or OS types.
 
 <a name="deployment"></a>
 ## Deployment
@@ -440,6 +454,8 @@ Bootstrap was used for most of the styling so this ensured that the css was alre
 This website was deployed through Heroku. Cloudinary was used for static and media files.
 
 A new app was created in Heroku and then linked to the Github repository. The app was configured in the settings tab and the 'config vars' were set to include database information, along with Cloudinary, email and port details. The database URL points to the database in ElephantSQL. 
+
+Other config vars include the Stripe API keys and webhook key. These ensure that the deployed version of the site has the correct Stripe implementation for payment processing.
 
 Automatic deployments were enabled and a final manual deployment was also done, to ensure all changes on the repository were reflected on the final deployed version.
 
