@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -48,7 +47,7 @@
         {% csrf_token %}
         <div class="form-group">
           <p><i class="fa-solid fa-cart-shopping"></i> Quantity:</p>
-          <input class="form-control-sm" type="number" name="quantity" value="1" min="1" max="99"
+          <input class="form-control-sm" aria-label="quantity" type="number" name="quantity" value="1" min="1" max="99"
             data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
         </div>
         <div class="form-group">

@@ -93,7 +93,7 @@ There are 7 models used in this website:
 | Product  | Product | FK: Category | 
 | Product  | Review |FK: User, Product | 
 | Profiles  | UserProfile | OnetoOne User | 
-| Profiles  | Contact | FK: User | 
+| Profiles  | Contact | FK: User, Review | 
 | Checkout  | Order | FK: UserProfile | 
 | Checkout  | OrderLineItem | FK: Order, Product | 
 
@@ -164,6 +164,8 @@ Users are asked to provide a rating, a title and a comment. They also type in a 
 Once the review is submitted, it appears on the book detail page. Reviews do not get approved so there is no wait time. Users cannot edit or delete their reviews. Currently, only site admins are allowed to delete reviews. The delete button is only visible when logged in as a site admin. Users can request deletion through a form on their profile page, but this needs to be reviewed and actioned by site admins. They do not have the ability to directly delete from the website.
 
 ![Review](/media/reviewpp5.jpg "Review")
+
+Future features for reviews include restricting the rating numbers so it is not possible to enter any number apart from 1 to 5, and having an average score for each book. There currently is not a high number of reviews on each book to have an average, but this could be developed in the future as the traffic to the site increases.
 
 <a name="profile"></a>
 ### Profile
@@ -418,7 +420,9 @@ Login as superuser and confirm links are visible, try adding, editing, delete pr
 
 HTML validator testing was done for each HTML page of the website (https://validator.w3.org/)
 
-![HTML]( "HTML")
+![HTML](/media/htmlpp5.jpg "HTML")
+
+On some pages, the validator tool does reference the type="text/javascript" as unnecessary. This was left as is because it is part of the postloadjs block and the type needs to be specified in that block. 
 
 CSS validator testing passed (https://jigsaw.w3.org/css-validator/)
 
@@ -440,8 +444,15 @@ Lighthouse testing was done through Chrome developer tools. Initially this retur
 
 Result for homepage:
 
-Result for products page:
+![Lighthouse](/media/lighthousehome.jpg "Lighthouse")
 
+Result for products page (all books):
+
+![Lighthouse](/media/lighthousebooks.jpg "Lighthouse")
+
+Result for product details page:
+
+![Lighthouse](/media/lighthousedetails.jpg "Lighthouse")
 
 <a name="othertesting"></a>
 ### Other testing

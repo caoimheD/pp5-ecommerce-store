@@ -1,15 +1,26 @@
 {% extends "base.html" %}
 
-    {% block content %}
+{% block content %}
 
-    <p>Please leave your review below by adding your name, a rating (out of 5), a title and review message</p>
-    <form method="POST">
-        <div class="form-row align-items-center">
-            <div class="col-sm-3 my-1">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit" value="Save"  class="form-control">
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+
+        <div class="col-md-auto">
+            <p>Please leave your review below by adding your name, a rating (out of 5), a title and review message</p>
+            <p>1 represents the lowest rating (negative review), while 5 is the highest (positive review)</p>
+            <form method="POST">
+                <div class="form-row align-items-center">
+                    <div class="col-sm-3 my-1">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Save" class="form-control">
+                    </div>
+                </div>
+            </form>
         </div>
-    </form>
-    {% endblock %}
+        
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
