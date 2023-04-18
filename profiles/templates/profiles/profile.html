@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-{% endblock %}
-
 {% block content %}
 
 <!-- Messages -->
@@ -20,13 +17,13 @@
     </div>
 </div>
 
-
-<h3>Your profile</h3>
+<h3>My profile</h3>
 
 <div class="container">
     <div class="row">
+        <!--Update personal info-->
         <div class="col-sm">
-            <p class="text-muted">Default Delivery Information</p>
+            <p class="text-muted">My delivery Information</p>
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
@@ -34,8 +31,9 @@
             </form>
             <br>
         </div>
+        <!--Order History-->
         <div class="col-sm">
-            <p class="text-muted">Order History</p>
+            <p class="text-muted">My previous orders</p>
             <div class="table-responsive">
                 <table class="table table-sm table-borderless">
                     <thead>
@@ -72,7 +70,7 @@
             </div>
         </div>
     </div>
-
+    <!---Reviews section-->
     <div class="row">
         <div class="col-sm">
             <p class="text-muted">My reviews</p>
@@ -85,6 +83,7 @@
             </ul>
             {% endfor %}
             <br>
+            <!--Request removal/contact form-->
             <p>Want to remove a review?
                 <a href="{% url 'contact' %}" class="btn addcart">Contact us</a>
             </p>

@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse, get_object_or_404, \
+    HttpResponse
 from django.views.decorators.http import require_POST
 from .models import Order, OrderLineItem
 from django.views.generic import ListView, DetailView, UpdateView, \
@@ -13,10 +14,7 @@ import json
 
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
-
-from django.conf import settings 
-from django.http.response import JsonResponse 
-from django.views.decorators.csrf import csrf_exempt 
+from django.conf import settings
 
 
 @require_POST
@@ -34,31 +32,6 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
-
-# class Order(ListView):
-#    model = Order
-#    template_name = '../templates/checkout/checkout.html'
-#    context_object_name = 'checkout'
-
-#    cart = request.session.get('cart', {})
-#    if not cart:
-#        messages.error(request, "There's nothing in your bag at the moment")
-
-
-# class CreateOrder(CreateView):
-#    model = Order
-#    fields = 'full_name', 'email', 'phone_number', 'street_address1', \
-#             'street_address2', 'town_or_city', 'postcode', 'county', \
-#             'country'
-#    template_name = '../templates/checkout/checkout.html'
-#    context_object_name = 'checkout'
-
-#    def cart(self, request):
-#        cart = request.session.get('cart', {})
-#        return cart
-
-#    stripe_public_key = settings.STRIPE_PUBLIC_KEY
-#    stripe_secret_key = settings.STRIPE_SECRET_KEY
 
 
 def checkout(request):
@@ -100,7 +73,8 @@ def checkout(request):
                     order_line_item.save()
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                            args=[order.order_number]))
 
         else:
             messages.error(request, 'There was an error with your form. \
@@ -108,7 +82,8 @@ def checkout(request):
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request,
+                           "There's nothing in your cart at the moment")
             return redirect(reverse('products'))
 
         current_cart = cart_contents(request)
@@ -190,25 +165,3 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
-
-
-# From Stripe documentation
-"""
-class StripeIntentView(View):
-    def post(self, request, *args, **kwargs):
-        try:
-            data = json.loads(request.data)
-        # Create a PaymentIntent with the order amount and currency
-            intent = stripe.PaymentIntent.create(
-                amount=calculate_order_amount(data['items']),
-                currency='eur',
-                automatic_payment_methods={
-                 'enabled': True,
-                },
-            )
-            return jsonify({
-                'clientSecret': intent['client_secret']
-            })
-        except Exception as e:
-            return jsonify(error=str(e)), 403
-"""

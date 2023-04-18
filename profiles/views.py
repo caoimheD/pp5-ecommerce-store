@@ -57,14 +57,14 @@ class CreateContact(LoginRequiredMixin, CreateView):
     fields = 'email', 'review', 'message'
     template_name = '../templates/profiles/contact.html'
     context_object_name = 'contacthere'
-    
+
     def get_form(self, *args, **kwargs):
         """
         Restricts the FK dropdown to only the logged in user's reviews
         """
         form = super(CreateContact, self).get_form(*args, **kwargs)
         form.fields['review'].queryset = self.request.user.review_set.all()
-        return form 
+        return form
 
     def form_valid(self, form):
         """

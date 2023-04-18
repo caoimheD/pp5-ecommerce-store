@@ -26,21 +26,13 @@
 
 <div class="container">
     <div class="row">
+        <!--Delivery and payment info-->
         <div class="col-md">
-  <!--         <form method="POST">
-                <div class="form-row">
-                    <div class="mb-3">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <input type="submit" value="Save" class="form-control">
-                    </div>
-                </div>
-            </form> --> 
-
-            {% include 'includes/payment_box.html' %} 
+            {% include 'includes/payment_box.html' %}
             <br>
         </div>
 
+        <!--Cart details-->
         <div class="col-sm">
             {% include 'includes/display_cart.html' %}
         </div>
@@ -63,5 +55,4 @@
 {{ stripe_public_key|json_script:"id_stripe_public_key" }}
 {{ client_secret|json_script:"id_client_secret" }}
 <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
-<script src="{% static 'checkout/js/checkout.js' %}"></script>
 {% endblock %}

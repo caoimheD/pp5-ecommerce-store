@@ -56,6 +56,6 @@ def remove_from_cart(request, item_id):
     if item_id in cartitems:
         cart.pop(item_id, None)
         messages.success(request, 'Item removed from cart')
-  
+
     request.session['cart'] = cart
     return redirect('cart')
