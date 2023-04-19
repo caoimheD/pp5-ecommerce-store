@@ -38,7 +38,7 @@ The purpose of this website is the sale of physical books, which are then delive
 
 User Stories
 
-The User Stories can be found in Github Projects (pp5-ecommerce-store -> Projects -> pp5-eccomerce-store or ) and are displayed in the Kanban board format. Each user story has an acceptance criteria and tasks. The User Stories are divided by site role, as different roles can perform different actions:
+The User Stories can be found in Github Projects (pp5-ecommerce-store -> Projects -> pp5-eccomerce-store or https://github.com/users/caoimheD/projects/4) and are displayed in the Kanban board format. Each user story has an acceptance criteria and tasks. The User Stories are divided by site role, as different roles can perform different actions:
 
 Site users
 - As a site user I can create an account so that I can have a profile and checkout
@@ -142,7 +142,7 @@ Products can be accessed either by the 'shop now' button on the homepage or thro
 
 For the purposes of this website, stock images have been used as the book images.
 
-On the products page, both for all books and for each category, users see cards with brief information about each book. This information is the title, author, category and price, along with an image. For each book, there is an option to click on 'see more', which brings to the product details page. There is an option on this page to add new products. This is available to admins only and allows them to add new products to the store. This button is not visible to regular site users.
+On the products page, both for all books and for each category, users see cards with brief information about each book. This information is the title, author, category and price, along with an image. For each book, there is an option to click on 'see details', which brings to the product details page. There is an option on this page to add new products. This is available to admins only and allows them to add new products to the store. This button is not visible to regular site users.
 
 <img src="media/categorymockup.png" width="300" height="400">
 
@@ -178,7 +178,7 @@ Users can also see their reviews on their profile page. They can see the product
 
 <img src="media/myreviewspp5.jpg" width="350" height="400">
 
-On the profile page, there is a contact button which is specifically for users to request removal of reviews. Please note that this does not automatically remove the review and it is expected behaviour that the review remains on the webiste after the form is submitted. Only admins can delete reviews directly from the site. The purpose of this contact form is for site users to request removal of a review. That request is then reviewed by site admins and actioned on accordingly. When clicking on the contact button, users will see fields for best contact email (in case they would like to be contacted on a different email to the one used with their account), a dropdown to select the review they want removed, and a message if they want to leave any comments or reasons. Users are only able to see their own reviews in the dropdown, this does not show all reviews of the website. This is not a report option for other site user's reviews, but just a way for users to request their review to be removed if they change their mind at a later date about the comments they made.
+On the profile page, there is a contact button which is specifically for users to request removal of reviews. Please note that this does not automatically remove the review and it is expected behaviour that the review remains on the website after the form is submitted. Only admins can delete reviews directly from the site. The purpose of this contact form is for site users to request removal of a review. That request is then reviewed by site admins and actioned on accordingly. When clicking on the contact button, users will see fields for best contact email (in case they would like to be contacted on a different email to the one used with their account), a dropdown to select the review they want removed, and a message if they want to leave any comments or reasons. Users are only able to see their own reviews in the dropdown, this does not show all reviews of the website. This is not a report option for other site user's reviews, but just a way for users to request their review to be removed if they change their mind at a later date about the comments they made.
 
 ![RemoveReview](/media/remove.jpg "RemoveReview")
 
