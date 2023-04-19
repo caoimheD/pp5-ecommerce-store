@@ -144,11 +144,11 @@ For the purposes of this website, stock images have been used as the book images
 
 On the products page, both for all books and for each category, users see cards with brief information about each book. This information is the title, author, category and price, along with an image. For each book, there is an option to click on 'see more', which brings to the product details page. There is an option on this page to add new products. This is available to admins only and allows them to add new products to the store. This button is not visible to regular site users.
 
-![Mockup](/media/categorymockup.png "Mockup")
+<img src="media/categorymockup.png" width="300" height="400">
 
 The product details page contains more detailed information about each book, such as a description, ISBN number and reviews. There is an option to add the book to cart, along with a quantity box to specify how many of each product the user wants.
 
-![Mockup](/media/detailsmockup.png "Mockup")
+<img src="media/detailsmockup.png" width="500" height="400">
 
 There are two admin buttons on this page, edit and delete. These are accessible to admins only and allow to either update the product or delete it. 
 
@@ -176,7 +176,7 @@ Next to the delivery details is a section that contains their previous orders. T
 
 Users can also see their reviews on their profile page. They can see the product they reviewed, the rating, title and review comment. The purpose of this section is that users are able to also keep track of any reviews they have made, without having to search for the book and click into the book details page.
 
-![MyReviews](/media/myreviewspp5.jpg "MyReviews")
+<img src="media/myreviewspp5.jpg" width="350" height="400">
 
 On the profile page, there is a contact button which is specifically for users to request removal of reviews. Please note that this does not automatically remove the review and it is expected behaviour that the review remains on the webiste after the form is submitted. Only admins can delete reviews directly from the site. The purpose of this contact form is for site users to request removal of a review. That request is then reviewed by site admins and actioned on accordingly. When clicking on the contact button, users will see fields for best contact email (in case they would like to be contacted on a different email to the one used with their account), a dropdown to select the review they want removed, and a message if they want to leave any comments or reasons. Users are only able to see their own reviews in the dropdown, this does not show all reviews of the website. This is not a report option for other site user's reviews, but just a way for users to request their review to be removed if they change their mind at a later date about the comments they made.
 
@@ -426,7 +426,7 @@ On some pages, the validator tool does reference the type="text/javascript" as u
 
 CSS validator testing passed (https://jigsaw.w3.org/css-validator/)
 
-![CSS]( "CSS")
+![CSS](media/cssp5.jpg "CSS")
 
 Python testing was done in Gitpod, with errors showing a red underscore and also in the 'problems' tab.
 
@@ -436,6 +436,8 @@ Javascript testing was done by testing the different functionalities, for exampl
 ### Responsiveness
 
 Bootstrap was used for most of the styling so this ensured that the css was already responsive. This was confirmed through the use of Chrome developer tools and adjusting to different devices. This was also manually done by adjusting the browser window size, without specifiying a particular device type.
+
+<img src="media/laptop.jpg" width="500" height="350">
 
 <a name="lighthousetesting"></a>
 ### Lighthouse
@@ -459,12 +461,32 @@ Result for product details page:
 
 The live website was opened on different browsers and features were used to confirm that they work on different browser or OS types.
 
+Bugs
+
+Currently there are no known bugs on the website.
+
+Fixed bugs: 
+
+500 error on Stripe webhook and emails not sending. This was fixed by correcting the filepath to the confirmation email text file and importing stripe and settings to the webhook file.
+
+400 error Stripe webook. This was fixed by editing the handle_payment_intent_succeeded to get the charge object.
+
+Images and CSS not displaying on Heroku. This was fixed by using the file path of the Cloudinary images directly, and by correcting typing errors for the static file path in settings.py.
+
+Future features:
+
+Review score to contain a max and min score. This is to ensure consistency of review scores. While users are currently informed of how to leave a score (leave a number out of 5 with 5 being the highest), the number box can be changed to enter in a different number. This currently does not have a big impact on the website as admins can remove reviews anyway if they do not comply with guidelines. However this featue would allow for a more streamlined process of leaving reviews.
+
+Cart pop up when adding an item to cart. Currently there is a success message that comes up, so users are notified when they add items to their cart and this is successful. To be in line with industry standards, this can be changed to having the item number show on the ‘cart’ on the nav bar and have a pop up that displays the current cart details.
+
+Search bar. Include a search bar so users can search for books.
+
 <a name="deployment"></a>
 ## Deployment
 
 This website was deployed through Heroku. Cloudinary was used for static and media files.
 
-A new app was created in Heroku and then linked to the Github repository. The app was configured in the settings tab and the 'config vars' were set to include database information, along with Cloudinary, email and port details. The database URL points to the database in ElephantSQL. 
+A new app was created in Heroku and then linked to the Github repository  (New button -> 'Create new app' -> choose region/name -> Create app). The app was configured in the settings tab and the 'config vars' were set to include database information, along with Cloudinary, email and port details. The database URL points to the database in ElephantSQL. 
 
 Other config vars include the Stripe API keys and webhook key. These ensure that the deployed version of the site has the correct Stripe implementation for payment processing.
 
